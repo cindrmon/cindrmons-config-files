@@ -1,0 +1,53 @@
+#!/bin/bash
+
+drive_fixer() {
+	if [ -z $1 ] ; then
+		echo -e "Please insert a drive location."
+	elif [ -z $2 ] ; then
+		echo -e "Please insert current drive status."
+	else
+        echo -e "Drive Location: $1\nDrive Status: $2\n"
+		if [ $2 == "ro" ] ; then
+			umount $1
+			ntfsfix $1
+			mount $1
+		fi
+	fi
+}
+
+
+if [ -z $1 ] ; then
+	echo -e "You need to set a UUID first."
+else
+
+	if [[ "$EUID" = 0 ]]; then
+		echo "(1) Already Root"
+	else
+		sudo -k # make sure to ask for password on next sudo
+		if sudo true; then
+			echo -e "(2) correct password"
+		else
+			echo -e "(3) wrong password"
+			exit 1
+		fi
+	fi
+
+	drive_to_check=$(blkid --uuid $1)
+	drive_status=$(cat /proc/mounts | grep ${drive_to_check} | awk '{print $4}' | awk -F , '{print $1}')
+
+	echo -e "Drive ${drive_to_check} is currently ${drive_status}."
+	if [[ ${drive_status} == 'ro' ]] ; then
+		echo -e "You might want to fix that."
+		echo -e "\nDo you want to fix? [Y/n]"
+		read fixChoice
+		if [ "${fixChoice}" = "Y" ] ; then
+			drive_fixer $drive_to_check $drive_status
+            echo -e "NTFS Drive Fixed."
+		else
+			echo -e "Program Cancelled."
+		fi
+	else
+		echo -e "Looks OK to me."
+	fi
+fi
+

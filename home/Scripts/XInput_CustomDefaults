@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# H420 Tablet
+#xinput set-prop HUION H420 stylus \
+#--type=float "Coordinate Transformation Matrix" \
+#2 0 -0.5 0 2 0 0 0 0.6
+
+# Kensington Orbit Mouse
+xinput set-prop "Kensington USB Orbit" "libinput Middle Emulation Enabled" 1

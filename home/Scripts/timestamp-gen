@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Custom Timestamp Generator
+# 
+# Used for naming a file made at that current time
+
+
+date +%Y%m%dT%H%M%SZ%z | sed 's/+//'

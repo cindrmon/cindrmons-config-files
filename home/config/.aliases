@@ -1,0 +1,121 @@
+
+##
+# My [Ba|Z]sh aliases
+## 
+#
+
+#!/usr/bin/env bash
+
+# REDIRECTS
+alias \
+    ohmyzsh="cd ~/.oh-my-zsh" \
+\
+
+# SUDO
+alias \
+	pls="sudo"\
+	plsroot="sudo su"\
+\
+
+# CHMOD
+alias \
+    xd="chmod +x"\
+	rwxd="chmod 777"\
+\
+
+# CONFIG EDIT
+alias \
+    aliasconf="$EDITOR ~/.aliases" \
+	fstabconf="sudo $EDITOR /etc/fstab"\
+	bashconf="$EDITOR ~/.bashrc"\
+	zshconf="$EDITOR ~/.zshrc"\
+	i3conf="$EDITOR ~/.config/i3/config"\
+	polybarconf="$EDITOR ~/.config/polybar/config"\
+\
+
+# DISTRO-SPECIFIC
+
+## UBUNTU
+alias \
+    a="sudo apt install" \
+\
+
+## FEDORA
+alias \
+    d="sudo dnf install" \
+\
+
+## ARCHLINUX
+alias \
+    p="sudo pacman -S" \
+    y="yay -S" \
+\
+
+# NMCLI (Primarily for Archlinux install)
+alias \
+	wifilist="nmcli d wifi list" \
+	wificonnect="nmcli d wifi connect" \
+\
+
+# SYSTEM
+alias \
+	pleasekillme="poweroff" \
+	update-grub="grub-mkconfig -o /boot/grub/grub.cfg" \
+\
+
+
+# ROFI
+alias \
+	calc="rofi -show calc -modi calc -no-show-match -no-sort"\
+\
+
+# GIT
+alias \
+	gstat="git status" \
+	gcommit="git commit" \
+	gpush="git push" \
+	gremote="git remote" \
+	gsubmodule="git submodule" \
+	gstash="git stash" \
+	gpull="git pull" \
+	gclone="git clone" \
+	gadd="git add" \
+	grestore="git restore" \
+	ginit="git init" \
+	gdiff="git diff" \
+	glog="git log" \
+	gglog="git glog" \
+	gcheckout="git checkout" \
+	gbranch="git branch" \
+	gmerge="git merge" \
+	gconfig="git config" \
+	gconfglobal="git config --global" \
+	gconfeditglobal="git config --global --edit" \
+	gconfedit="git config --local --edit" \
+\
+
+# PASS GIT
+alias \
+	pwstat="pass git status" \
+	pwcommit="pass git commit" \
+	pwpush="pass git push" \
+	pwremote="pass git remote" \
+	pwsubmodule="pass git submodule" \
+	pwstash="pass git stash" \
+	pwpull="pass git pull" \
+	pwclone="pass git clone" \
+	pwadd="pass git add" \
+	pwrestore="pass git restore" \
+	pwinit="pass git init" \
+	pwdiff="pass git diff" \
+	pwlog="pass git log" \
+	pwcheckout="pass git checkout" \
+	pwbranch="pass git branch" \
+	pwmerge="pass git merge" \
+\
+
+# OTHER
+alias \
+	whoareyou="whoami" \
+\
+

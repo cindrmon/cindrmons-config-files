@@ -1,0 +1,54 @@
+# cindrmon's pacstrap-cont script
+#
+# Do you ever get frustrated from constantly retrying pacstrap because
+# your internet is goddamn slow, and it would frequently 'Request Time Out'
+# when bootstrapping your packages? Well, this is the script for you!
+# 
+# It will constantly pacstrap n times or until pacstrap has finally completed
+# without exiting with any errors or 'Request Timed Out'
+#
+# TODO: Figure out the 'request timed out' return code
+#
+#
+#!/bin/bash
+
+
+Help () {
+    echo $0
+    echo "- Pacstrap continuously n times or until pacstrap completes. (WARNING: Pointless)"
+    echo
+    echo "Syntax: pacstrap-cont [-h] [no_of_times_to_repeat] root [packages...]"
+    echo
+    echo "options:"
+    echo "h     print this help"
+}
+
+while getopts ":h" option; do
+    case $option in
+        h) # display help
+            Help
+            exit;;
+    esac
+done
+
+if [ -z $1 ]; then
+    echo "You need to set how many times you want it to repeat before exhausting"
+elif [ -z $2 ]; then
+    echo "You need to set root location first"
+elif [ -z $3 ]; then
+    echo "You need to set package names first"
+else
+    packages=($@)
+    # remove mount point from packages array
+    unset packages[0]
+    unset packages[1]
+    
+    /usr/bin/pacstrap $2 ${packages[*]}
+    
+    idex=0
+    while [ $? -eq 1 ] && [ $idex -le $1 ]; do
+        /usr/bin/pacstrap $2 ${packages[*]}
+        idex=$(( idex+1 ))
+    done
+fi
+

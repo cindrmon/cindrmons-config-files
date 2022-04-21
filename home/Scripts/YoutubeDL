@@ -1,0 +1,111 @@
+#!/usr/bin/python3
+
+# os functions
+import os
+home_dir = os.environ['HOME']
+
+AvailableFlags = ['loc']
+
+current_yt_program = "yt-dlp"
+
+def helpText():
+    print("Available Commands: ")
+    print("printDefLoc - Print current Default Location")
+    print("changeDefLoc - Change current Default Location")
+    print("list [URL] - List all available formats")
+    print("audio <flags> [URL] - Download Audio Only (mp3)")
+    print("video <flags> [URL] - Download Entire Video (mp4)")
+    print("playlistaudio <flags> [Playlist_URL] - Download Entire Playlist (mp3)")
+    print("playlistvideo <flags> [Playlist_URL] - Download Entire Playlist (mp4)")
+    print("bestaudio <flags> [URL] - Download Best Audio (mp3, m4a)")
+    print("bestvideo <flags> [URL] - Download Best Video (mp4,mkv, webm)")
+    print("help - print this help text for commands")
+    print("exit - exit the program")
+    print()
+    print("Available Flags: ")
+    print("--loc - Change Default Location to a different location")
+    print()
+
+def flagChecker(cmd):
+    for flag in AvailableFlags:
+        if(f"--{flag}" in cmd):
+            return True
+        else:
+            return False
+
+def commandSetter(CommandStream):
+    
+    # checks the last item in the command stream for the url
+    url = CommandStream[len(CommandStream)-1]
+
+    # checks the first item in the command stream for the command to be executed
+    Command = CommandStream[0]
+
+    # File Title
+    Title = "%(title)s.%(ext)s"
+
+    # checks for flags and does flag action
+    if(flagChecker(CommandStream) and CommandStream[1] == "--loc"):
+        CustomLocation = CommandStream[2]
+    else:
+        CustomLocation = DefaultLocation
+
+    # Sets final flag conditions
+    if(Command == "list"):
+        Flags = f'--list-formats '
+
+    elif(Command == "audio"):
+        Flags = f'-x --audio-format mp3 -o "{CustomLocation}/{Title}" '
+    
+    elif(Command == "video"):
+        Flags = f'--format mp4 -o "{CustomLocation}/{Title}" '
+
+    elif(Command == "bestaudio"):
+        Flags = f'-x --audio-format mp3 -f bestaudio -o "{CustomLocation}/{Title}" '
+
+    elif(Command == "bestvideo"):
+        Flags = f'-f bestvideo+bestaudio -o "{CustomLocation}/{Title}" '
+
+    elif(Command == "playlistvideo"):
+        Flags = f'-i -f mp4 -o "{CustomLocation}/{Title}" --yes-playlist '
+
+    elif(Command == "playlistaudio"):
+        Flags = f'-i -f bestaudio --extract-audio --audio-format mp3 --audio-quality 160K -o "{CustomLocation}/{Title}" --yes-playlist '
+
+
+    # Returns Final Command
+    return f'{current_yt_program} {Flags} {url}'
+
+print("Simple YoutubeDL!")
+
+DefaultLocation = home_dir + "/Videos/YoutubeVideos"
+print(f"Current YoutubeDL Program: {Current_yt_program}")
+print(f"Default Location: {DefaultLocation}")
+print()
+helpText()
+
+while 1:
+
+
+    choice = input("> ")
+    command = choice.split()
+
+    if("exit" in command):
+        break
+
+    elif("help" in command):
+        helpText()
+
+    elif("printDefLoc" in command):
+        print(f"Default Location: {DefaultLocation}")
+
+    elif("changeDefLoc" in command):
+        DefaultLocation = input("Input new Default Location: ")
+        print()
+        print(f"New Default Location: {DefaultLocation}")
+        print()
+
+    else:
+        os.system(commandSetter(command))
+
+print("Bye")

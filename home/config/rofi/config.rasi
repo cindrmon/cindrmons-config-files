@@ -1,0 +1,8 @@
+configuration {
+	modi: "window,ssh,drun,combi";
+    combi-modi: "window,ssh,drun";
+    sudo-modi: "drun";
+	terminal: "kitty";
+	ssh-client: "ssh";
+}
+@import "/usr/share/rofi/themes/Monokai.rasi"

@@ -1,0 +1,591 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;    ____ ____ ____ ____ ____ 
+;   ||N |||e |||x |||v |||s ||
+;   ||__|||__|||__|||__|||__||
+;   |/__\|/__\|/__\|/__\|/__\|
+;
+;    ____ ____ ____ ____ ____ 
+;   ||A |||l |||p |||h |||a ||
+;   ||__|||__|||__|||__|||__||
+;   |/__\|/__\|/__\|/__\|/__\|
+;
+;    ____ ____ ____ ____ ____ ____ 
+;   ||c |||o |||n |||f |||i |||g ||
+;   ||__|||__|||__|||__|||__|||__||
+;   |/__\|/__\|/__\|/__\|/__\|/__\|
+;
+;==========================================================
+
+; ><;;;;*/> VARIABLES
+;[old-color-palette]
+;background = ${xrdb:color0:#222}
+;background = #00000000
+;background-alt = #52c48d
+;foreground = ${xrdb:color7:#222}
+;foreground = #dfdfdf
+;foreground-alt = #555
+;primary = #eff244
+;secondary = #4b49a3
+;alert = #f759a6
+
+; ><;;;;*/> NEW COLOUR PALETTE
+[colors]
+background = #00000000
+background-alt = #1e212b
+foreground = #fafafa
+foreground-alt = #555
+foreground-light = #333
+splash-1 = #fff07c
+splash-2 = #80ff72
+splash-3 = #7ee8fa
+splash-4 = #ff8427
+splash-5 = #b1e0dc
+splash-6 = #4553ba
+splash-7 = #bad604
+alert = #f27460
+
+
+[default-fonts]
+default-fixed-font = "fixfont:pixelsize=10;1"
+default-unifont = "unifont:fontformat=truetype:size=8:antialias=false;0" 
+default-icon-font = "siji:pixelsize=12;2"
+
+[custom-fonts]
+custom-fixed-font = "SF Pro Display:pixelsize=12;1"
+custom-unifont = "Comic Code Ligatures Regular:size=10:antialias=false;0"
+fontawesome = "FontAwesome:pixelsize=12;2"
+fontawesome-brands = "Font Awesome 5 Brands:pixelsize=12;2"
+
+; ><;;;;*/> MAIN MONITOR BAR
+[bar/main_monitor]
+monitor = ${env:MONITOR:HDMI-0}
+width = 100%
+height = 33
+;offset-x = 1%
+;offset-y = 1%
+radius = 0.0
+fixed-center = false
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-size = 4
+border-color = #00000000
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = ${custom-fonts.custom-fixed-font}
+font-1 = ${default-fonts.default-fixed-font}
+font-2 = ${default-fonts.default-unifont}
+font-3 = ${default-fonts.default-icon-font}
+font-4 = ${custom-fonts.fontawesome}
+font-5 = ${custom-fonts.fontawesome-brands}
+
+modules-left = i3 
+modules-center = xwindow 
+modules-right = date powermenu
+
+tray-position = none
+;tray-padding = 2
+;tray-background = #0063ff
+
+;wm-restack = bspwm
+;wm-restack = i3
+
+;override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+; ><;;;;*/> SECONDARY MONITOR BAR TOP
+[bar/sub_monitor_top]
+monitor = ${env:MONITOR:DVI-I-1}
+width = 100%
+height = 33
+;offset-x = 1%
+;offset-y = 1%
+radius = 0.0
+fixed-center = false
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-size = 4
+border-color = #00000000
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = ${custom-fonts.custom-fixed-font}
+font-1 = ${default-fonts.default-fixed-font}
+font-2 = ${default-fonts.default-unifont}
+font-3 = ${default-fonts.default-icon-font}
+font-4 = ${custom-fonts.fontawesome}
+font-5 = ${custom-fonts.fontawesome-brands}
+
+modules-left = 
+modules-center = rootfs mexfs VMfs datafs  
+; Wifi Mode
+; modules-right = xkeyboard memory cpu wlan temperature date
+; Ethernet Mode
+; modules-right = xkeyboard memory cpu eth temperature
+; Wifi + Ethernet Mode
+modules-right = xkeyboard wlan eth
+
+tray-position = none
+;tray-padding = 2
+;tray-background = #0063ff
+
+;wm-restack = bspwm
+;wm-restack = i3
+
+;override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+
+; ><;;;;*/> SECONDARY MONITOR BAR BOTTOM
+[bar/sub_monitor_bottom]
+monitor = ${env:MONITOR:DVI-I-1}
+width = 100%
+height = 27
+;offset-x = 1%
+;offset-y = 1%
+radius = 0.0
+fixed-center = false
+bottom = true
+
+background = #33333333
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-size = 4
+border-color = #00000000
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = ${custom-fonts.custom-fixed-font}
+font-1 = ${default-fonts.default-fixed-font}
+font-2 = ${default-fonts.default-unifont}
+font-3 = ${default-fonts.default-icon-font}
+font-4 = ${custom-fonts.fontawesome}
+font-5 = ${custom-fonts.fontawesome-brands}
+
+modules-left = i3
+modules-center = 
+; modules-right = pulseaudio
+; Wifi + Ethernet Mode
+modules-right = memory cpu temperature pulseaudio
+
+
+tray-position = right
+tray-padding = 2
+;tray-background = #0063ff
+
+;wm-restack = bspwm
+;wm-restack = i3
+
+;override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+; ><;;;;*/> MODULES
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:80:...%
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+format-prefix = "  "
+format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-underline = ${colors.splash-1}
+
+label-layout = %layout%
+label-layout-underline = ${colors.splash-1}
+
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-background = ${colors.splash-1}
+label-indicator-underline = ${colors.splash-1}
+
+; ><;;;;*/> MODULES/Filesystems
+[module/rootfs]
+type = internal/fs
+interval = 25
+
+mount-0 = /
+
+label-mounted = %{A1:thunar / & disown:}%{F#80ff72}%{F-} %free% free%{A}
+label-unmounted = root not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+
+[module/mexfs]
+type = internal/fs
+interval = 25
+
+mount-0 = /mnt/mex
+
+label-mounted = %{A1:thunar ~ & disown:}%{F#80ff72} mex%{F-} %free% free%{A}
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+
+[module/VMfs]
+type = internal/fs
+interval = 25
+
+mount-0 = /mnt/vms
+
+label-mounted = %{A1:thunar ~/Drives/vms & disown:}%{F#80ff72} VMs%{F-} %free% free%{A}
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+
+[module/datafs]
+type = internal/fs
+interval = 25
+
+mount-0 = /mnt/data
+
+label-mounted = %{A1:thunar ~/Drives/data & disown:}%{F#80ff72} Data%{F-} %free% free%{A}
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+; Only show workspaces on the same output as the bar
+pin-workspaces = true
+
+; workspace icons
+ws-icon-0 = 01: TERMNL;
+ws-icon-1 = 02: SOCIAL;
+ws-icon-2 = 03: PAUDIO;
+ws-icon-3 = 04: PASSWD;
+ws-icon-4 = 05: SYSTEM;
+ws-icon-5 = 06: TORRNT;
+ws-icon-6 = 07: NOTION;
+ws-icon-7 = 08;
+ws-icon-8 = 09;
+ws-icon-9 = 10;
+ws-icon-10 = 11: BRWSRS;
+ws-icon-11 = 12: CODING;
+ws-icon-12 = 13: GAMES;
+ws-icon-13 = 14: MUSIC;
+ws-icon-14 = 15: AVPROD;
+ws-icon-15 = 16: TERMNL;
+ws-icon-16 = 17;
+ws-icon-17 = 18;
+ws-icon-18 = 19;
+ws-icon-19 = 20;
+
+label-mode-padding = 2
+label-mode-foreground = #000
+label-mode-background = ${colors.splash-1}
+
+; focused = Active workspace on focused monitor
+label-focused = %index% %icon% 
+label-focused-foreground = ${colors.foreground-light}
+label-focused-background = ${colors.splash-2}
+label-focused-padding = 2
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %index% %icon%
+label-unfocused-padding = 2
+
+; visible = Active workspace on unfocused monitor
+label-visible = %index% %icon%
+label-visible-background = ${self.label-focused-background}
+label-visible-foreground = ${self.label-focused-foreground}
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent = %index% %icon%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+; Separator in between workspaces
+; label-separator = |
+
+[module/mpd]
+type = internal/mpd
+format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
+
+label-song-maxlen = 25
+label-song-ellipsis = true
+
+[module/xbacklight]
+type = internal/xbacklight
+
+format = <label> <bar>
+label = BL
+
+bar-width = 10
+bar-indicator = |
+bar-indicator-foreground = #fff
+bar-indicator-font = 2
+bar-fill = ─
+bar-fill-font = 2
+bar-fill-foreground = #9f78e1
+bar-empty = ─
+bar-empty-font = 2
+bar-empty-foreground = ${colors.foreground-alt}
+
+[module/backlight-acpi]
+inherit = module/xbacklight
+type = internal/backlight
+card = intel_backlight
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = ${colors.splash-7}
+label = %percentage:2%%
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = ${colors.splash-6}
+label = %gb_used%+%gb_swap_used%
+
+[module/wlan]
+type = internal/network
+interface = wlp3s0
+interval = 3.0
+
+format-connected= <label-connected>
+format-connected-prefix = " "
+format-connected-prefix-foreground = ${colors.foreground-alt}
+format-connected-underline = ${colors.splash-5}
+label-connected = %essid% @ %local_ip% | %{F#3eb67c}%{F-}  %downspeed% %{F#6664b9}%{F-}  %upspeed%
+
+format-disconnected = <label-disconnected>
+format-disconnected-underline = ${colors.alert}
+label-disconnected = %ifname% Down or Not Connected
+label-disconnected-foreground = ${colors.alert}
+
+format-packetloss = <label-connected> <animation-packetloss>
+
+; animation-packetloss
+animation-packetloss-0 = 
+animation-packetloss-0-foreground = ${colors.foreground}
+animation-packetloss-1 = 
+animation-packetloss-1-foreground = ${colors.foreground}
+animation-packetloss-framerate = 500
+
+
+[module/eth]
+type = internal/network
+interface = enp4s0
+interval = 3.0
+
+format-connected-underline = ${colors.splash-5}
+format-connected-prefix = " "
+format-connected-prefix-foreground = ${colors.foreground-alt}
+label-connected = %local_ip% | %{F#3eb67c}%{F-}  %downspeed% %{F#6664b9}%{F-}  %upspeed%
+
+format-disconnected = <label-disconnected>
+format-disconnected-underline = ${colors.alert}
+label-disconnected = %ifname% Down or Not Connected
+label-disconnected-foreground = ${colors.alert}
+
+format-packetloss = <label-connected> <animation-packetloss>
+
+; animation-packetloss
+animation-packetloss-0 = 
+animation-packetloss-0-foreground = ${colors.foreground}
+animation-packetloss-1 = 
+animation-packetloss-1-foreground = ${colors.foreground}
+animation-packetloss-framerate = 500
+
+[module/date]
+type = internal/date
+interval = 1
+
+date = " %Y-%m-%d"
+time = %H:%M:%S
+
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #0a6cf5
+
+label = %date% %time%
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume = <ramp-volume> <label-volume> <bar-volume>
+label-volume = %percentage%%
+label-volume-foreground = ${root.foreground}
+
+label-muted = " muted"
+label-muted-foreground = ${colors.foreground-alt}
+
+bar-volume-width = 10
+bar-volume-foreground-0 = ${colors.splash-2}
+bar-volume-foreground-1 = ${colors.splash-2}
+bar-volume-foreground-2 = ${colors.splash-2}
+bar-volume-foreground-3 = ${colors.splash-2}
+bar-volume-foreground-4 = ${colors.splash-2}
+bar-volume-foreground-5 = ${colors.splash-4}
+bar-volume-foreground-6 = ${colors.alert}
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = =
+bar-volume-fill-font = 2
+bar-volume-empty = =
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+click-right = pavucontrol
+
+[module/alsa]
+type = internal/alsa
+
+format-volume = <label-volume> <bar-volume>
+label-volume = VOL
+label-volume-foreground = ${root.foreground}
+
+format-muted-prefix = " "
+format-muted-foreground = ${colors.foreground-alt}
+label-muted = sound muted
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
+
+format = <ramp> <label>
+format-underline = ${colors.splash-4}
+format-warn = <ramp> <label-warn>
+format-warn-underline = ${self.format-underline}
+
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = ${colors.secondary}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colors.foreground-alt}
+
+[module/powermenu]
+type = custom/menu
+
+expand-right = true
+
+format-spacing = 1
+
+label-open = 
+label-open-foreground = ${colors.splash-3}
+label-close =  cancel
+label-close-foreground = ${colors.splash-3}
+label-separator = ||
+label-separator-foreground = ${colors.foreground-alt}
+
+menu-0-0 = logout
+menu-0-0-exec = i3-msg exit
+menu-0-1 = lock
+menu-0-1-exec = "i3lock --color '#111111'; sleep 1; xset dpms force off;"
+menu-0-2 = reboot
+menu-0-2-exec = systemctl reboot
+menu-0-3 = power off
+menu-0-3-exec = "/home/cinder/Scripts/shutdown-sound.shutdown; systemctl poweroff"
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = false
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+; vim:ft=dosini
