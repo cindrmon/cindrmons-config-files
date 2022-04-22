@@ -1,0 +1,6 @@
+[user]
+	name = cindrmon
+	email = cindrmon@protonmail.com
+	signingkey = 3242BFBD7689C12B
+[core]
+	autocrlf = false

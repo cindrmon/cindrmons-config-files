@@ -9,9 +9,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### TODO:
 
-[ ] Add Recommended VS Code/ium Extensions
+- Add Recommended VS Code/ium Extensions
 
-[ ] Re-add vscode/ium settings.json
+## [2.0.1] - 2022-04-23
+
+- Decided to re-add vscode as part of the config files, since only `settings.json` was the only thing needed.
+
+### Added
+
+- vscode/settings.json
+  - re-add vscode config file as only `settings.json` basic defaults (not including mostly extension-dependent configration).
+
+- git/.gitconfig
+  - add git global config to watch changes and modify.
+
+### Updated
+
+- Updated CHANGELOG version numbers for clarity.
 
 ## [2.0.0] - 2022-04-22
 
@@ -67,7 +81,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - alacritty
     - remove alacritty config, as I don't use it anymore
 
-## [1.2.1] - 2021-08-04
+## [1.1.3] - 2021-08-04
 
 - added archiso Scripts as individual folder
 - Currently Backupped at this timepoint:
@@ -97,7 +111,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 
-## [1.2] - 2021-06-22
+## [1.1.2] - 2021-06-22
 
 - Finished custom polybar config
 - Currently Backupped at this timepoint:
@@ -132,7 +146,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Updated and somewhat polished polybar colour scheme (subject to change).
 
-## [1.1] - 2021-06-07
+## [1.1.1] - 2021-06-07
 
 - Currently Backupped at this timepoint:
 
@@ -161,7 +175,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Rofi StowPackage dotfile config
 - Nvim StowPackage dotfile config
 
-## [1.0] - 2021-05-31
+## [1.1.0] - 2021-05-31
 
 - A revamped version 1 that uses stow.
 - Currently Backupped at this timepoint:
@@ -195,7 +209,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Now has a wiki page on how to stow these files.
 - Included other dotfiles to backup, like kitty and nvim
 
-## [0.1] - 2020-09-06
+## [1.0.0] - 2020-09-06
 
 - First version.
 - Currently Backupped at this timepoint:
