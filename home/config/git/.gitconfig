@@ -4,3 +4,7 @@
 	signingkey = 3242BFBD7689C12B
 [core]
 	autocrlf = false
+[alias]
+	unstage = reset HEAD --
+	last = log -1 HEAD --decorate
+	glog = log --graph --decorate --pretty=format:'%C(auto)%d %h by %Cgreen%an%Creset: %s' --abbrev-commit

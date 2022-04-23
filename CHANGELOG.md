@@ -11,6 +11,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add Recommended VS Code/ium Extensions
 
+## [2.0.2] - 2022-04-23
+
+### Added
+
+- git/.gitconfig
+    - add git aliases
+
 ## [2.0.1] - 2022-04-23
 
 - Decided to re-add vscode as part of the config files, since only `settings.json` was the only thing needed.
