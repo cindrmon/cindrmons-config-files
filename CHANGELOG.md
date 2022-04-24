@@ -11,6 +11,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add Recommended VS Code/ium Extensions
 
+## [2.0.3] - 2022-04-24
+
+### Added
+
+- yarnrc
+    - Add yarnrc config to set prefix to $HOME/.local as reference file.
+
+### Updated
+
+- zshrc
+    - Add `~/Scripts` to PATH in addition to `~/Binaries/Scripts`.
+
 ## [2.0.2] - 2022-04-23
 
 ### Added

@@ -88,7 +88,7 @@ export PATH="$PATH:/opt/android-studio/bin"
 
 ## My Scripts
 
-export PATH="$PATH:$HOME/Binaries/Scripts"
+export PATH="$PATH:$HOME/Scripts:$HOME/Binaries/Scripts"
 
 ## Yarn Global as Local
 
