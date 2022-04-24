@@ -11,6 +11,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add Recommended VS Code/ium Extensions
 
+## [2.0.4] - 2022-04-25
+
+### Added
+
+- xfce4/terminal/terminalrc
+    - Add xfce4-terminal configruation.
+
 ## [2.0.3] - 2022-04-24
 
 ### Added
