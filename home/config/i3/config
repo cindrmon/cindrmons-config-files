@@ -382,17 +382,25 @@ set $m1 HDMI-0
 
 ## Auto StartUp Programs
 
+### Terminals
+exec xfce4-terminal -e "bash -c 'task next;zsh'" -T "Show Current Tasks"
 # exec cool-retro-term
-# exec discord
-# exec firefox
-exec megasync
-# exec nextcloud
 # exec edex-ui
-# exec udiskie -2 &
+
+### Programs
+exec_always pavucontrol
+# exec discord
+
+### Web Browsers
+# exec firefox
+
+### Services
+# exec megasync
+# exec nextcloud
 exec premid
 
-exec_always pavucontrol
-
+### Other
+# exec udiskie -2 &
 exec_always numlockx &
 
 ########################################################################

@@ -11,6 +11,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add Recommended VS Code/ium Extensions
 
+## [2.0.7] - 2022-04-25
+
+### Updated
+
+- i3/config
+    - Refactor start-up programs section
+
 ## [2.0.6] - 2022-04-25
 
 ### Updated
