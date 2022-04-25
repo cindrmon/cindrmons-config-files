@@ -13,6 +13,15 @@
 # Files
 data.location=~/Documents/TaskWarrior
 
+# Custom Reports
+
+## deadlines
+report.deadlines.description=List of open tasks by due date and urgency
+report.deadlines.columns=id,due.relative,urgency,project,description.count
+report.deadlines.labels=ID,Due,Urg,Project,Description
+report.deadlines.sort=due-\/,urgency-\/,project+\/,entry+
+report.deadlines.filter=status:pending limit:7
+
 # Color theme (uncomment one to use)
 #include /usr/share/task/light-16.theme
 #include /usr/share/task/light-256.theme
@@ -29,6 +38,7 @@ data.location=~/Documents/TaskWarrior
 #include /usr/share/task/solarized-light-256.theme
 #include /usr/share/task/no-color.theme
 
+# taskd configuration
 ###
 # taskd.* is redeacted.
 ###
