@@ -11,6 +11,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add Recommended VS Code/ium Extensions
 
+## [2.0.10] - 2022-04-25
+
+### Updated
+
+- i3/config
+    - update xfce4-terminal to autostart with current tasks using `deadline` report from taskwarrior config.
+
 ## [2.0.9] - 2022-04-25
 
 ### Updated

@@ -384,7 +384,7 @@ set $m1 HDMI-0
 ## Auto StartUp Programs
 
 ### Terminals
-exec xfce4-terminal -e "bash -c 'task next;zsh'" -T "Show Current Tasks"
+exec xfce4-terminal -e "bash -c 'task deadlines;zsh'" -T "Show Current Tasks"
 # exec cool-retro-term
 # exec edex-ui
 
