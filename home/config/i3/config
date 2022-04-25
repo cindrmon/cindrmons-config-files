@@ -311,6 +311,7 @@ set $m1 HDMI-0
 	
 		## ws1 -> Terminal
 		assign [class="konsole"] $ws01
+        assign [class="Xfce4-terminal"] $ws01
 		assign [class="cool-retro-term"] $ws01
 		assign [class="URxvt"] $ws01
         assign [class="eDEX-UI"] $ws01
