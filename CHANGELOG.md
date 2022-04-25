@@ -11,6 +11,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add Recommended VS Code/ium Extensions
 
+## [2.0.5] - 2022-04-25
+
+### Added
+
+- taskwarrior
+    - Add taskwarrior custom location configuration.
+
+### Updated
+
+- xfce4/terminal/terminalrc
+    - Update `MiscMenubarDefault` to `FALSE`.
+
 ## [2.0.4] - 2022-04-25
 
 ### Added
