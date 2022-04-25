@@ -369,6 +369,7 @@ set $m1 HDMI-0
 		assign [class="Spotify"] $ws14
         assign [class="vlc"] $ws14
         assign [class="plexmediaplayer"] $ws14
+        assing [class="mpv"] $ws14
 
 		## ws15 -> A/V Production/Free
 		assign [class="resolve"] $ws15

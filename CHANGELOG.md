@@ -11,6 +11,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add Recommended VS Code/ium Extensions
 
+## [2.0.6] - 2022-04-25
+
+### Updated
+
+- i3/config
+    - Add mpv to workspace14 (Music)
+
 ## [2.0.5] - 2022-04-25
 
 ### Added
