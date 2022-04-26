@@ -398,6 +398,7 @@ exec_always pavucontrol
 ### Services
 # exec megasync
 # exec nextcloud
+# exec task sync
 exec premid
 
 ### Other

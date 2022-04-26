@@ -11,6 +11,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add Recommended VS Code/ium Extensions
 
+## [2.0.11] - 2022-04-26
+
+### Updated
+
+- i3/config
+    - Add `task sync` service to autostart every login.
+
+- taskwarrior
+    - Update deadline report configuration:
+        - Add additional columns for priority
+        - Change sort order for due date
+
 ## [2.0.10] - 2022-04-25
 
 ### Updated

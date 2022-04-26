@@ -17,9 +17,9 @@ data.location=~/Documents/TaskWarrior
 
 ## deadlines
 report.deadlines.description=List of open tasks by due date and urgency
-report.deadlines.columns=id,due.relative,urgency,project,description.count
-report.deadlines.labels=ID,Due,Urg,Project,Description
-report.deadlines.sort=due-\/,urgency-\/,project+\/,entry+
+report.deadlines.columns=id,due.relative,urgency,priority,project,description.count
+report.deadlines.labels=ID,Due,Urg,P,Project,Description
+report.deadlines.sort=due+\/,urgency-\/,project+\/,entry+
 report.deadlines.filter=status:pending limit:7
 
 # Color theme (uncomment one to use)
@@ -39,6 +39,8 @@ report.deadlines.filter=status:pending limit:7
 #include /usr/share/task/no-color.theme
 
 # taskd configuration
-###
-# taskd.* is redeacted.
-###
+# taskd.certificate=REDACTED
+# taskd.key=REDACTED
+# taskd.ca=REDACTED
+# taskd.server=REDACTED
+# taskd.credentials=REDACTED
