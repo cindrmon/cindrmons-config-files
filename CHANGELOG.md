@@ -12,6 +12,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add Recommended VS Code/ium Extensions
 - Add Vim-Plugged auto-install script
 
+## [2.0.13] - 2022-04-28
+
+- Update alias filename and path location (should now be in $XDG_CONFIG_HOME)
+
+### Updated
+
+- Change .aliases to aliases instead.
+
+- zshrc
+	- Update alias path to `~/.config/` instead.
+
+- bashrc
+	- Update alias path t `~/.config/` instead.
+
 ## [2.0.12] - 2022-04-28
 
 ### Updated

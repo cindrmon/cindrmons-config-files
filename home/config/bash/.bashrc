@@ -13,8 +13,8 @@ fi
 export PATH
 
 # User aliases
-if [ -f ~/.aliases ]; then
-    . ~/.aliases
+if [ -f ~/.config/aliases ]; then
+    . ~/.config/aliases
 fi
 
 
