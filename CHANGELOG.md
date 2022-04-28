@@ -12,6 +12,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add Recommended VS Code/ium Extensions
 - Add Vim-Plugged auto-install script
 
+## [2.0.16] - 2022-04-28
+
+### Added
+
+- aliases
+	- add shorthand for `task deadlines` --> `whattodo`
+
 ## [2.0.15] - 2022-04-28
 
 ### Updated
