@@ -17,6 +17,9 @@ call plug#begin()
     Plug 'yamatsum/nvim-cursorline'                      " Highlight similar stuff
 	Plug 'numToStr/FTerm.nvim'							 " Hovering terminal in nvim
 
+	" Themes
+	Plug 'cocopon/iceberg.vim'							 " Iceberg by cocopon
+
 	" Still needs fixing
 "   Plug 'kevinhwang91/rnvimr'							 " Ranger in neovim
 

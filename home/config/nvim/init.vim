@@ -15,6 +15,7 @@ set incsearch					" incremental search
 
 set noswapfile					" disable creating swapfile
 set backupdir=~/.cache/nvim		" directory to store backup files
+set undofile					" undo persistence
 
 set shellcmdflag=-ic			" Make shell interactive
 
@@ -38,6 +39,9 @@ luafile $HOME/.config/nvim/lua_configs/barbar.lua
 luafile $HOME/.config/nvim/lua_configs/lualine.lua
 luafile $HOME/.config/nvim/lua_configs/fterm.lua
 luafile $HOME/.config/nvim/lua_configs/chadtree.lua
+
+"" SET THEME
+colorscheme iceberg
 
 "" CUSTOM KEYBINDINGS
 
