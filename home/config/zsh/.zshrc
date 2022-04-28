@@ -82,9 +82,18 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+## XDG
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+
 ## Anything in /opt
 
 export PATH="$PATH:/opt/android-studio/bin"
+
+## Anything in $XDG_DATA_HOME
+# export PATH="$PATH:$XDG_DATA_HOME/nvim/nvim-linux64/bin"
+### Only uncomment line above if nvim binary is on $XDG_DATA_HOME
 
 ## My Scripts
 
