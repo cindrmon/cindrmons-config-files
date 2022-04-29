@@ -12,6 +12,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add Recommended VS Code/ium Extensions
 - Add Vim-Plugged auto-install script
 
+## [2.0.17] - 2022-04-30
+
+### Updated
+
+- nvim
+	- add additional plugins and plugin configuration
+	- replace comment plugin from `tpope/vim-commentary` to `numToStr/Comment.nvim`
+
+- aliases
+	- add kitty ssh kitten alias
+
+### Added
+
 ## [2.0.16] - 2022-04-28
 
 ### Added

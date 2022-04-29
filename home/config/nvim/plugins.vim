@@ -11,11 +11,13 @@ call plug#begin()
 	Plug 'tpope/vim-fugitive'							 " git commands
 	Plug 'mattn/emmet-vim'								 " HTML Emmet commands
 	Plug 'andweeb/presence.nvim'						 " Discord Rich presence
-	Plug 'tpope/vim-commentary'							 " Ctrl+/ to comment out stuff
+	Plug 'tpope/Comment.nvim'							 " Ctrl+/ to comment out stuff
     Plug 'norcalli/nvim-colorizer.lua'                   " Render colors present in text
     Plug 'andymass/vim-matchup'                          " Better '%'
     Plug 'yamatsum/nvim-cursorline'                      " Highlight similar stuff
 	Plug 'numToStr/FTerm.nvim'							 " Hovering terminal in nvim
+	Plug 'booperlv/nvim-gomove'							 " Sublimetext-like line movement
+    Plug 'nvim-treesitter/nvim-treesitter' , {'do': ':TSUpdate'} " Better syntax highlighting
 
 	" Themes
 	Plug 'cocopon/iceberg.vim'							 " Iceberg by cocopon

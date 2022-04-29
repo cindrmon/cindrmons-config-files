@@ -33,6 +33,12 @@ alias \
 	polybarconf="$EDITOR ~/.config/polybar/config"\
 \
 
+# KITTY-SPECIFIC
+
+alias \
+	owossh="kitty +kitten ssh" \
+\
+
 # DISTRO-SPECIFIC
 
 ## UBUNTU
