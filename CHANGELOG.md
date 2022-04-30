@@ -12,6 +12,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add Recommended VS Code/ium Extensions
 - Add Vim-Plugged auto-install script
 
+## [2.0.18] - 2022-04-30
+
+### Updated
+
+- nvim
+	- add figlet title header and collapsible vim sections on main init.vim.
+	- add suda plugin for enabling sudo edits for restricted file access files.
+
+
 ## [2.0.17] - 2022-04-30
 
 ### Updated

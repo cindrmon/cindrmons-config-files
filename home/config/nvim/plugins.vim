@@ -18,6 +18,7 @@ call plug#begin()
 	Plug 'numToStr/FTerm.nvim'							 " Hovering terminal in nvim
 	Plug 'booperlv/nvim-gomove'							 " Sublimetext-like line movement
     Plug 'nvim-treesitter/nvim-treesitter' , {'do': ':TSUpdate'} " Better syntax highlighting
+	Plug 'lambdalisue/suda.vim'							 " Enable to read and write files with sudo
 
 	" Themes
 	Plug 'cocopon/iceberg.vim'							 " Iceberg by cocopon
