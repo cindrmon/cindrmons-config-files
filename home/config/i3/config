@@ -1,3 +1,7 @@
+# vim:fileencoding=utf-8:foldmethod=marker
+
+########################################################################
+########################################################################
 #     ____ ____ ____ ____ ____ ____ ____ ____ ____ 
 #    ||c |||i |||n |||d |||r |||m |||o |||n |||s ||
 #    ||__|||__|||__|||__|||__|||__|||__|||__|||__||
@@ -21,31 +25,32 @@
 # No more complicated jargon from the generated config file.
 # Recreated from the original generated config, with slight adjustments.
 # ASCII art and colored intellicode best viewed in a vim editor.
+# Now with vim collapsible sections!
 
 ########################################################################
-##  000. Main Mod button  ##############################################
+#:  000. Main Mod button {{{
 ########################################################################
 
 set $mod Mod4
 
-########################################################################
+## }}} #################################################################
 ########################################################################
 
 ########################################################################
-##  001. Font for window Titles  #######################################
+#:  001. Font for window Titles {{{
 ########################################################################
 
 # font pango: Fira Sans 12
 font pango: SF Pro Display 12
 
-########################################################################
-########################################################################
-
-########################################################################
-##  002. Important Keybinds  ###########################################
+## }}} #################################################################
 ########################################################################
 
-####  a. Config File Manipulation  #####################################
+########################################################################
+#:  002. Important Keybinds  {{{
+########################################################################
+
+#:  a. Config File Manipulation {{{
 
 ## reloading config file
 bindsym $mod+Shift+c reload
@@ -56,59 +61,66 @@ bindsym $mod+Shift+r restart
 ## logout from i3
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you want to logout to i3?' -B 'Yes, exit i3' 'i3-msg exit'"
 
+# }}}
+
+## }}} #################################################################
+########################################################################
 
 ########################################################################
+#:  003. Personal Keybinds  {{{
 ########################################################################
 
-########################################################################
-##  003. Personal Keybinds  ############################################
-########################################################################
-
-####  a. Terminal  ##################################################### 
+#:  a. Terminal  {{{ 
 bindsym $mod+Return exec kitty
 bindsym $mod+Shift+Return exec xfce4-terminal
 ## bindsym $mod+Shift+Return exec urxvt
 ## bindsym $mod+Return exec cool-retro-term
 ## bindsym $mod+Return exec konsole 
 ## bindsym $mod+Shift+Return exec alacritty
+# }}}
 
-
-####  b. Explorer  #####################################################
+#:  b. Explorer  {{{
 ## bindsym $mod+e exec pcmanfm
 bindsym $mod+e exec thunar
 ## bindsym $mod+e exec nemo
 ## bindsym $mod+e exec dolphin
 ## bindsym $mod+e exec nautilus
+# }}}
 
-####  c. Kill Window  ##################################################
+#:  c. Kill Window  {{{
 bindsym $mod+Shift+q kill
+# }}}
 
-####  d. Lock Screen  ##################################################
+#:  d. Lock Screen  {{{
 # bindsym $mod+Shift+x exec i3lock --color '#111111' && sleep 1 && xset dpms force off
 bindsym $mod+Shift+x exec i3lock --color '#111111' && systemctl suspend
+# }}}
 
-####  e. Program Launcher  #############################################
+#:  e. Program Launcher  {{{
 bindsym $mod+d exec rofi -combi-modi window#drun#run#ssh -show combi
 bindsym $mod+Mod1+d exec rofi -sudo-modi drun#run -show drun -run-command 'gksudo {cmd}'
 bindsym $mod+shift+d exec rofi-pass
 bindsym $mod+Mod1+c exec rofi -show calc -modi calc -no-show-match -no-sort
+# }}}
 
-####  f. Screenshot with scrot  ########################################
+#:  f. Screenshot with scrot  {{{
 bindsym --release $mod+shift+a exec scrot -m ~/Pictures/Screenshots/Screenshot_%b%d::%H%M%S.png    
 bindsym --release $mod+shift+s exec scrot -s ~/Pictures/Snapshots/Snapshot_%b%d::%H%M%S.png
 bindsym --release $mod+shift+m exec scrot --focused ~/Pictures/Snapshots/Focused_Snapshot_%b%d::%H%M%S.png
+# }}}
+
+## }}} #################################################################
+########################################################################
 
 ########################################################################
+#:  004. Window Movement  {{{
 ########################################################################
 
-########################################################################
-##  004. Window Movement  ##############################################
-########################################################################
-
-####  a. Mouse Dragging  ###############################################
+#:  a. Mouse Dragging  {{{
 floating_modifier $mod
+# }}}
 
-####  b. Change Focus  #################################################
+#:  b. Change Focus  {{{
 
 # VIM binding movement
 bindsym $mod+h focus left
@@ -129,7 +141,9 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+z focus parent
 bindsym $mod+x focus child
 
-####  c. Move Focused Window  ##########################################
+# }}}
+
+#:  c. Move Focused Window  {{{
 
 # VIM Binding Movement
 bindsym $mod+Shift+h move left
@@ -143,26 +157,36 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-####  d. Splitting (H)orizontally/(V)ertically  ########################
+# }}}
+
+#:  d. Splitting (H)orizontally/(V)ertically  {{{
 
 bindsym $mod+g split h
 bindsym $mod+b split v
 
-####  e. Fullscreen Mode  ##############################################
+# }}}
+
+#:  e. Fullscreen Mode  {{{
 
 bindsym $mod+f fullscreen toggle
 
-####  f. Change Container Layout (Stacking, Tabbed, Toggle Split)  #####
+# }}}
+
+#:  f. Change Container Layout (Stacking, Tabbed, Toggle Split)  {{{
 
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+q layout toggle split
 
-####  g. Tiling  #######################################################
+# }}}
+
+#:  g. Tiling  {{{
 
 bindsym $mod+Shift+space floating toggle
 
-####  h. Resizing Windows  #############################################
+# }}}
+
+#:  h. Resizing Windows  {{{
 
 mode "resize" {
 
@@ -197,14 +221,16 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-########################################################################
+# }}}
+
+# }}} ##################################################################
 ########################################################################
 
 ########################################################################
-##  005. Workspaces  ###################################################
+#:  005. Workspaces  {{{
 ########################################################################
 
-####  a. Mapping Workspaces  ###########################################
+#:  a. Mapping Workspaces  {{{
 
 ## Variable Assignment
 set $ws01 "01: TERMNL"
@@ -272,13 +298,15 @@ bindsym Mod1+Shift+8 move container to workspace number $ws18
 bindsym Mod1+Shift+9 move container to workspace number $ws19
 bindsym Mod1+Shift+0 move container to workspace number $ws20
 
-####  b. Assigning Workspaces  #########################################
+# }}}
+
+#:  b. Assigning Workspaces  {{{
 
 ## Workspace Monitor Binding
 set $s1 DVI-I-1
 set $m1 HDMI-0
 
-## Workspace Monitor Assignments
+#: Workspace Monitor Assignments {{{
 
 	## Monitor 1 (DVI-I-0)
 	 workspace $ws01 output $s1
@@ -305,50 +333,62 @@ set $m1 HDMI-0
      workspace $ws19 output $m1
      workspace $ws20 output $m1
 
-## Program Assignments
+# }}}
 
-	## ---------------- MONITOR 1 ----------------
+#: Program Assignments {{{
+
+	#: ---------------- MONITOR 1 ---------------- {{{
 	
-		## ws1 -> Terminal
+		#: ws1 -> Terminal {{{
 		assign [class="konsole"] $ws01
         assign [class="Xfce4-terminal"] $ws01
 		assign [class="cool-retro-term"] $ws01
 		assign [class="URxvt"] $ws01
         assign [class="eDEX-UI"] $ws01
         assign [class="kitty"] $ws01
+		# }}}
 
-    	## ws2 -> Social Media
+    	#: ws2 -> Social Media {{{
 		assign [class="discord"] $ws02
 		assign [class="IGdm"] $ws02
+		# }}}
 	
-        ## ws3 -> PulseAudio
+        #: ws3 -> PulseAudio {{{
 		assign [class="Pavucontrol"] $ws03
+		# }}}
 
-        ## ws4 -> Password Managers
+        #: ws4 -> Password Managers {{{
 		assign [class="KeePassXC"] $ws04
 		assign [class="KeePass2"] $ws04
 		assign [class="QtPass"] $ws04
+		# }}}
 
-		## ws5 -> System Monitors/Free
+		#: ws5 -> System Monitors/Free {{{
 		assign [class="deepin-system-monitor"] $ws05
 		assign [class="Gnome-system-monitor"] $ws05
 		assign [class="MEGAsync"] $ws05
+		# }}}
 
-		## ws6 -> Torrenting
+		#: ws6 -> Torrenting {{{
 		assign [class="Transmission-gtk"] $ws06
 		assign [class="qBittorrent"] $ws06
+		# }}}
 
-        ## ws7 -> Browsers/LBRY/Notion
+        #: ws7 -> Browsers/LBRY/Notion {{{
         assign [class="LBRY"] $ws07
         assign [class="notion-app-enhanced"] $ws07
+		# }}}
 
-	## ---------------- MONITOR 2 ----------------
-		## ws11 -> Browsers
+	# }}}
+
+	#: ---------------- MONITOR 2 ---------------- {{{
+		#: ws11 -> Browsers {{{
 		assign [class="firefox"] $ws11
 		assign [class="Brave-browser"] $ws11
         assign [class="Vivaldi-stable"] $ws11
+		# }}}
 
-		## ws12 -> Coding
+		#: ws12 -> Coding {{{
 		assign [class="Code"] $ws12
 		assign [class="code-oss"] $ws12
 		assign [class="VSCodium"] $ws12
@@ -358,33 +398,48 @@ set $m1 HDMI-0
         assign [class="jetbrains-studio"] $ws12
         assign [class="jetbrains-idea-ce"] $ws12
         assign [class="jetbrains-pycharm-ce"] $ws12
+		# }}}
 
-		## ws13 -> Games
+		#: ws13 -> Games {{{
 		assign [class="retroarch"] $ws13
 		assign [class="Lutris"] $ws13
 		assign [class="Steam"] $ws13
         assign [class="parsecd"] $ws13
         assign [class="StepMania"] $ws13
+		# }}}
 
-		## ws14 -> Music
+		#: ws14 -> Music {{{
 		assign [class="Spotify"] $ws14
         assign [class="vlc"] $ws14
         assign [class="plexmediaplayer"] $ws14
-        assing [class="mpv"] $ws14
+        assign [class="mpv"] $ws14
+		# }}}
 
-		## ws15 -> A/V Production/Free
+		#: ws15 -> A/V Production/Free {{{
 		assign [class="resolve"] $ws15
 		assign [class="kdenlive"] $ws15
 		assign [class="Ghb"] $ws15
 		assign [class="Audacity"] $ws15
+		# }}}
 
-        ## ws17 -> Design Production/Free
+        #: ws17 -> Design Production/Free {{{
         assign [class="figma-linux"] $ws17
+		# }}}
 
-## Auto StartUp Programs
+	# }}}
+
+# }}}
+
+# }}}
+
+#: c. Auto StartUp Programs  {{{
+
+### Startup Sound
+exec --no-startup-id mpv --no-video --quiet $HOME/.config/startup.wav
 
 ### Terminals
-exec xfce4-terminal -e "bash -c 'task deadlines;zsh'" -T "Show Current Tasks"
+# exec xfce4-terminal -e "bash -c 'task deadlines;zsh'" -T "Show Current Tasks"
+exec kitty sh -c "task deadlines; zsh;" --title "Here's what you need to do today..."
 # exec cool-retro-term
 # exec edex-ui
 
@@ -398,28 +453,31 @@ exec_always pavucontrol
 ### Services
 # exec megasync
 # exec nextcloud
-# exec task sync
+exec task sync
 exec premid
 
 ### Other
 # exec udiskie -2 &
 exec_always numlockx &
 
-########################################################################
+# }}}
+
+# }}} ##################################################################
 ########################################################################
 
-
 ########################################################################
-##  006. Customization  ################################################
+#:  006. Customization  {{{
 ########################################################################
 
-####  a. i3Gaps  #######################################################
+#:  a. i3Gaps  {{{
 
 gaps inner 10
 gaps outer 5
 ## smart_gaps on
 
-####  b. i3bar  ########################################################
+# }}}
+
+#:  b. i3bar  {{{
 
 # bar {
 #	  status_command i3status -c $HOME/.config/i3status/config.conf
@@ -434,13 +492,17 @@ gaps outer 5
 #	 }
 # }
 
-####  c. polybar  ######################################################
+# }}}
+
+#:  c. polybar  {{{
 
 # exec polybar example &
 # exec --no-startup-id launch.sh
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-####  d. window/bg colors  #############################################
+# }}}
+
+#:  d. window/bg colors  {{{
 
 set $bg-color 	         #000000
 set $inactive-bg-color   #2f343f
@@ -457,22 +519,25 @@ client.urgent           $urgent-bg-color    	$urgent-bg-color   	$text-color    
 
 default_border pixel 0
 
-########################################################################
+# }}}
+
+# }}} ##################################################################
 ########################################################################
 
 ########################################################################
-##  007. Miscellaneous  ################################################
+#:  007. Miscellaneous  {{{
 ########################################################################
 
-####  a. Wallpaper  ####################################################
+#:  a. Wallpaper  {{{
 exec_always feh --bg-scale $HOME/.config/BG.jpg
-#exec_always feh --bg-scale $HOME/Pictuers/BG.jpg
+# }}}
 
-####  b. Transparency (Requires Compton)  ##############################
+#:  b. Transparency (Requires Compton)  {{{
 # exec_always compton -f
 exec_always picom
+# }}}
 
-####  c. Dual Monitor Setup  ###########################################
+#:  c. Dual Monitor Setup  {{{
 ## OLD
 # exec xrandr --output DVI-I-0 --mode 1440x900 --pos 0x90 --rotate normal --output DVI-I-1 --off --output DP-0 --off --output DP-1 --off --output HDMI-0 --primary --mode 1920x1080 --pos 1440x0 --rotate normal --output DVI-D-0 --off
 
@@ -482,7 +547,7 @@ exec xrandr --output DVI-I-0 --mode 1920x1200 --pos 0x0 --rotate normal --output
 ##HP(PO)+Asus
 # exec xrandr --output DVI-I-0 --mode 1920x1200 --pos 0x0 --rotate left --output DVI-I-1 --off --output DP-0 --off --output DP-1 --off --output HDMI-0 --primary --mode 1920x1080 --pos 1200x840 --rotate normal --output DVI-D-0 --off
 
-#### c-a. Rotate Secondary Screen ######################################
+#: c-a. Rotate Secondary Screen {{{
 
 set $mode_rotate Rotate Screen: [p]ortrait [l]andscape
 bindsym $mod+y mode "$mode_rotate"
@@ -496,22 +561,31 @@ mode "$mode_rotate" {
     bindsym $mod+y mode "default"
 }
 
-####  d. Audio  ########################################################
+# }}}
+
+# }}}
+
+#:  d. Audio  {{{
 ## exec pacmd set-card-profile 0 output:hdmi-stereo
+# }}}
 
-####  e. Albert  #######################################################
+#:  e. Albert  {{{
 ## exec albert
+# }}}
 
-####  f. XInput  #######################################################
+#:  f. XInput {{{
 exec $HOME/Scripts/XInput_CustomDefaults
+# }}}
 
-####  g. mocp-icon  ####################################################
+#:  g. mocp-icon  {{{
 # exec mocicon
+# }}}
 
-####  h. conky  ########################################################
+#:  h. conky  {{{
 # exec $HOME/.conky/conky-startup.sh
+# }}}
 
-########################################################################
+# }}} ##################################################################
 ########################################################################
 
 #########################################################################

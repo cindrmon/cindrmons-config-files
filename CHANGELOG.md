@@ -12,6 +12,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add Recommended VS Code/ium Extensions
 - Add Vim-Plugged auto-install script
 
+## [2.0.25] - 2022-06-11
+
+### Updated
+
+- i3
+	- refactored i3config to use vim folds
+
+## [2.0.24] - 2022-06-11
+
+### Added
+
+- add startup.wav sound to i3config
+
 ## [2.0.23] - 2022-06-11
 
 ### Updated
