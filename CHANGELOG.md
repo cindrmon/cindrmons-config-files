@@ -12,6 +12,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add Recommended VS Code/ium Extensions
 - Add Vim-Plugged auto-install script
 
+## [2.0.23] - 2022-06-11
+
+### Updated
+
+- kitty
+	- add iceberg theme
+	- fix ssh kitten issue when asking for password
+
 ## [2.0.22] - 2022-06-11
 
 ### Updated
