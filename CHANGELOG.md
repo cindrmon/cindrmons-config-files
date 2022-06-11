@@ -12,6 +12,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add Recommended VS Code/ium Extensions
 - Add Vim-Plugged auto-install script
 
+## [2.0.20] - 2022-06-11
+
+### Updated
+- zshrc
+	- refactor zsh config
+
 ## [2.0.19] - 2022-06-11
 
 ### Added

@@ -1,68 +1,48 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# vim:fileencoding=utf-8:foldmethod=marker
+
+########################################################################
+########################################################################
+#     ____ ____ ____ ____ ____ ____ ____ ____ ____ 
+#    ||c |||i |||n |||d |||r |||m |||o |||n |||s ||
+#    ||__|||__|||__|||__|||__|||__|||__|||__|||__||
+#    |/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|
+#
+#       ____ ____ ____ _________ ____ ____ ____ 
+#      ||z |||e |||n |||       |||z |||s |||h ||
+#      ||__|||__|||__|||_______|||__|||__|||__||
+#      |/__\|/__\|/__\|/_______\|/__\|/__\|/__\|
+#
+#           ____ ____ ____ ____ ____ ____ 
+#          ||c |||o |||n |||f |||i |||g ||
+#          ||__|||__|||__|||__|||__|||__||
+#          |/__\|/__\|/__\|/__\|/__\|/__\|
+#
+########################################################################
+########################################################################
+
+# Officially Modified zsh config designed for my convenience.
+# Switching completely to bend ghrough my own will and such.
+# No more complicated jargon from the generated config file.
+# Recreated from the original generated config, with slight adjustments.
+# ASCII art and colored intellicode best viewed in a vim editor.
+# Now with vim collapsible Sections!
+
+########################################################################
+#:  000. Oh My Zsh Configuration {{{
+########################################################################
+
+## NOTE: this zshrc file must have omz installed.
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="candy"
+# Current Theme
 ZSH_THEME="candy-24h"
+# ZSH_THEME="candy"     # fallback
+# ZSH_THEME="random"
 
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-ZSH_THEME_RANDOM_CANDIDATES=( "candy-24h" "agnoster" )
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS=true
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+# Specify if you want specific random themes
+ZSH_THEME_RANDOM_CANDIDATES=( "candy-24h" "agnoster" )    # 
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -75,87 +55,120 @@ plugins=(
     node
     vscode
     web-search
-    zsh-autosuggestions
+    zsh-autosuggestions         # install zsh-autosuggestions first
  )
 
+# Oh My Zsh
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
+## }}} #################################################################
+########################################################################
 
-## XDG
+########################################################################
+#: 001. Environment Variables {{{
+########################################################################
+
+########################################################################
+#: 001a. Global Variables {{{
+########################################################################
+
+# Default Editor
+if [[ -n $SSH_CONNECTION ]]; then
+	export EDITOR='vim'
+else
+	export EDITOR='nvim'
+fi
+export EDITOR='nvim'
+
+## }}} #################################################################
+########################################################################
+
+########################################################################
+#: 001b. XDG Variables {{{
+########################################################################
+
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 
-## Anything in /opt
+## }}} #################################################################
+########################################################################
 
-export PATH="$PATH:/opt/android-studio/bin"
+########################################################################
+#: 001c. Program-Specific Configuration {{{
+########################################################################
 
-## Anything in $XDG_DATA_HOME
-# export PATH="$PATH:$XDG_DATA_HOME/nvim/nvim-linux64/bin"
-### Only uncomment line above if nvim binary is on $XDG_DATA_HOME
-
-## My Scripts
-
-export PATH="$PATH:$HOME/Scripts:$HOME/Binaries/Scripts"
-
-## Yarn Global as Local
-
-export PATH="$PATH:$(yarn global bin)"
-
-## Deno Configuration
-
+# Deno
 # export DENO_DIR="$HOME/.local/share/deno"
 # export PATH="$PATH:/home/cinder/.local/share/deno/bin"
 
-## Go Configuration
-
-export GOPATH=$HOME/.local/share/go
-export PATH="$PATH:$GOPATH/bin"
-
-## Flutter Configuration
-
-export PATH="$PATH:$HOME/.local/share/flutter/bin"
-export CHROME_EXECUTABLE="/usr/bin/brave-browser"
-
-## Ruby Configuration
-
+# Ruby
+# eval "$(rbenv init -)"
 # export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
-# export PATH="$PATH:$GEM_HOME/bin"
 
-## GPG Configuration
+# Go
+export GOPATH=$HOME/.local/share/go
 
+# Rust
+unset rc
+. "$XDG_DATA_HOME/cargo/env"
+
+# Flutter
+# export CHROME_EXECUTABLE="/usr/bin/brave-browser"
+
+# GPG
 export GPG_TTY=$(tty)
 export GNUPGHOME=$HOME/.gnupg
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+## }}} #################################################################
+########################################################################
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#    export EDITOR='vim'
-#  else
-#    export EDITOR='nvim'
-# fi
-# export EDITOR='nvim'
+########################################################################
+#: 001x. Updated PATH Variables {{{
+########################################################################
 
-# Default Editor
+# Local Scripts
+export PATH="$PATH:$HOME/Scripts:$HOME/Binaries/Scripts"
 
-export EDITOR='vim'
+# Local Binary Directories
+export PATH="$PATH:$HOME/bin:$HOME/.local/bin"
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+# Yarn
+export PATH="$PATH:$(yarn global bin)"		# must set global bin config first
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# Ruby
+export PATH="$PATH:$HOME/.local/share/rbenv/bin"
+export PATH="$PATH:$HOME/.local/share/rbenv/plugins/ruby-build/bin"
+# export PATH="$PATH:$GEM_HOME/bin"
+
+# Go
+export PATH="$PATH:$GOPATH/bin"
+
+# Rust
+export PATH="$PATH:$HOME/.local/share/cargo/bin"
+
+# Flutter
+export PATH="$PATH:$HOME/.local/share/flutter/bin"
+
+# PHP
+# export PATH="$PATH:$HOME/.config/composer/vendor/bin"
+
+## }}} #################################################################
+########################################################################
+
+## }}} #################################################################
+########################################################################
+
+########################################################################
+#:  003. Aliases {{{
+########################################################################
 
 source $HOME/.config/aliases
 
-# DWM Swallow
-bindkey '^X^m' accept-line-swallow
-zle -N accept-line-swallow acceptandswallow
-acceptandswallow() {
-    dwmswallow $WINDOWID
-    zle accept-line
-}
+## }}} #################################################################
+########################################################################
+
+#########################################################################
+###########################  NOTHING FOLLOWS  ###########################
+#########################################################################
+
