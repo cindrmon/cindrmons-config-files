@@ -57,19 +57,19 @@ filetype plugin indent on
 source $HOME/.config/nvim/plugins.vim
 
 "" PLUGIN CONFIG FILES
-luafile $HOME/.config/nvim/lua_configs/presence.lua
-luafile $HOME/.config/nvim/lua_configs/rnvimr.lua
-luafile $HOME/.config/nvim/lua_configs/coq.lua
-luafile $HOME/.config/nvim/lua_configs/colorizer.lua
-luafile $HOME/.config/nvim/lua_configs/cursorline.lua
-luafile $HOME/.config/nvim/lua_configs/barbar.lua
-luafile $HOME/.config/nvim/lua_configs/lualine.lua
-luafile $HOME/.config/nvim/lua_configs/fterm.lua
-luafile $HOME/.config/nvim/lua_configs/chadtree.lua
-luafile $HOME/.config/nvim/lua_configs/gomove.lua
-luafile $HOME/.config/nvim/lua_configs/treesitter.lua
-luafile $HOME/.config/nvim/lua_configs/comment.lua
-luafile $HOME/.config/nvim/lua_configs/suda.lua
+luafile $HOME/.config/nvim/plugin_configs/presence.lua
+luafile $HOME/.config/nvim/plugin_configs/rnvimr.lua
+luafile $HOME/.config/nvim/plugin_configs/coq.lua
+luafile $HOME/.config/nvim/plugin_configs/colorizer.lua
+luafile $HOME/.config/nvim/plugin_configs/cursorline.lua
+luafile $HOME/.config/nvim/plugin_configs/barbar.lua
+luafile $HOME/.config/nvim/plugin_configs/lualine.lua
+luafile $HOME/.config/nvim/plugin_configs/fterm.lua
+luafile $HOME/.config/nvim/plugin_configs/chadtree.lua
+luafile $HOME/.config/nvim/plugin_configs/gomove.lua
+luafile $HOME/.config/nvim/plugin_configs/treesitter.lua
+luafile $HOME/.config/nvim/plugin_configs/comment.lua
+luafile $HOME/.config/nvim/plugin_configs/suda.lua
 
 " }}}
 
@@ -84,7 +84,6 @@ autocmd VimEnter * highlight! link CursorColumn CursorLine   " same color for cu
 " CUSTOM KEYBINDINGS {{{
 
 "" Standard Keybindings
-  
 """ Tab Management
 	map <leader>tn :tabnew<cr>
 	map <leader>t<leader> :tabnext<cr>

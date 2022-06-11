@@ -11,7 +11,7 @@ call plug#begin()
 	Plug 'tpope/vim-fugitive'							 " git commands
 	Plug 'mattn/emmet-vim'								 " HTML Emmet commands
 	Plug 'andweeb/presence.nvim'						 " Discord Rich presence
-	Plug 'tpope/Comment.nvim'							 " Ctrl+/ to comment out stuff
+    Plug 'numToStr/Comment.nvim'                                 " Commands to comment text
     Plug 'norcalli/nvim-colorizer.lua'                   " Render colors present in text
     Plug 'andymass/vim-matchup'                          " Better '%'
     Plug 'yamatsum/nvim-cursorline'                      " Highlight similar stuff

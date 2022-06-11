@@ -12,6 +12,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add Recommended VS Code/ium Extensions
 - Add Vim-Plugged auto-install script
 
+## [2.0.22] - 2022-06-11
+
+### Updated
+
+- nvim
+	- update neovim configs to latest configuration
+
 ## [2.0.21] - 2022-06-11
 
 ### Updated
