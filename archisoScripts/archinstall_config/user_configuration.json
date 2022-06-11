@@ -1,0 +1,128 @@
+{
+    "additional-repositories": [
+        "multilib"
+    ],
+    "audio": "pipewire",
+    "bootloader": "grub-install",
+    "config_version": "2.5.0",
+    "debug": false,
+    "desktop-environment": "awesome",
+    "gfx_driver": "Nvidia (proprietary)",
+    "harddrives": [
+        "/dev/sda"
+    ],
+    "hostname": "NexvsAlphaXI",
+    "mirror-region": {
+        "Hong Kong": {
+            "http://hkg.mirror.rackspace.com/archlinux/$repo/os/$arch": true,
+            "http://mirror-hk.koddos.net/archlinux/$repo/os/$arch": true,
+            "http://mirror.xtom.com.hk/archlinux/$repo/os/$arch": true,
+            "https://arch-mirror.wtako.net/$repo/os/$arch": true,
+            "https://hkg.mirror.rackspace.com/archlinux/$repo/os/$arch": true,
+            "https://mirror-hk.koddos.net/archlinux/$repo/os/$arch": true,
+            "https://mirror.xtom.com.hk/archlinux/$repo/os/$arch": true
+        },
+        "Indonesia": {
+            "http://kebo.pens.ac.id/archlinux/$repo/os/$arch": true,
+            "http://mirror.cloudweeb.com/archlinux/$repo/os/$arch": true,
+            "http://mirror.faizuladib.com/archlinux/$repo/os/$arch": true,
+            "http://mirror.gi.co.id/archlinux/$repo/os/$arch": true,
+            "http://mirror.labkom.id/archlinux/$repo/os/$arch": true,
+            "http://mirror.papua.go.id/archlinux/$repo/os/$arch": true,
+            "http://mirror.repository.id/archlinux/$repo/os/$arch": true,
+            "http://mirror.telkomuniversity.ac.id/archlinux/$repo/os/$arch": true,
+            "http://vpsmurah.jagoanhosting.com/archlinux/$repo/os/$arch": true,
+            "https://mirror.gi.co.id/archlinux/$repo/os/$arch": true,
+            "https://mirror.papua.go.id/archlinux/$repo/os/$arch": true,
+            "https://mirror.repository.id/archlinux/$repo/os/$arch": true,
+            "https://mirror.telkomuniversity.ac.id/archlinux/$repo/os/$arch": true,
+            "https://vpsmurah.jagoanhosting.com/archlinux/$repo/os/$arch": true
+        },
+        "Japan": {
+            "http://ftp.jaist.ac.jp/pub/Linux/ArchLinux/$repo/os/$arch": true,
+            "http://ftp.tsukuba.wide.ad.jp/Linux/archlinux/$repo/os/$arch": true,
+            "http://mirrors.cat.net/archlinux/$repo/os/$arch": true,
+            "https://ftp.jaist.ac.jp/pub/Linux/ArchLinux/$repo/os/$arch": true,
+            "https://mirrors.cat.net/archlinux/$repo/os/$arch": true
+        },
+        "Singapore": {
+            "http://mirror.aktkn.sg/archlinux/$repo/os/$arch": true,
+            "http://mirror.guillaumea.fr/archlinux/$repo/os/$arch": true,
+            "http://mirror.jingk.ai/archlinux/$repo/os/$arch": true,
+            "http://mirror.sg.gs/archlinux/$repo/os/$arch": true,
+            "http://ossmirror.mycloud.services/os/linux/archlinux/$repo/os/$arch": true,
+            "https://download.nus.edu.sg/mirror/archlinux/$repo/os/$arch": true,
+            "https://mirror.aktkn.sg/archlinux/$repo/os/$arch": true,
+            "https://mirror.guillaumea.fr/archlinux/$repo/os/$arch": true,
+            "https://mirror.jingk.ai/archlinux/$repo/os/$arch": true,
+            "https://mirror.sg.gs/archlinux/$repo/os/$arch": true
+        },
+        "South Korea": {
+            "http://ftp.harukasan.org/archlinux/$repo/os/$arch": true,
+            "http://mirror.anigil.com/archlinux/$repo/os/$arch": true,
+            "http://mirror.funami.tech/arch/$repo/os/$arch": true,
+            "http://mirror.misakamikoto.network/archlinux/$repo/os/$arch": true,
+            "http://mirror.premi.st/archlinux/$repo/os/$arch": true,
+            "https://ftp.harukasan.org/archlinux/$repo/os/$arch": true,
+            "https://mirror.anigil.com/archlinux/$repo/os/$arch": true,
+            "https://mirror.funami.tech/arch/$repo/os/$arch": true,
+            "https://mirror.misakamikoto.network/archlinux/$repo/os/$arch": true,
+            "https://mirror.premi.st/archlinux/$repo/os/$arch": true
+        },
+        "Taiwan": {
+            "http://archlinux.ccns.ncku.edu.tw/archlinux/$repo/os/$arch": true,
+            "http://archlinux.cs.nycu.edu.tw/$repo/os/$arch": true,
+            "http://free.nchc.org.tw/arch/$repo/os/$arch": true,
+            "http://ftp.tku.edu.tw/Linux/ArchLinux/$repo/os/$arch": true,
+            "http://mirror.archlinux.tw/ArchLinux/$repo/os/$arch": true,
+            "http://shadow.ind.ntou.edu.tw/archlinux/$repo/os/$arch": true,
+            "https://archlinux.cs.nycu.edu.tw/$repo/os/$arch": true,
+            "https://free.nchc.org.tw/arch/$repo/os/$arch": true,
+            "https://mirror.archlinux.tw/ArchLinux/$repo/os/$arch": true,
+            "https://shadow.ind.ntou.edu.tw/archlinux/$repo/os/$arch": true
+        },
+        "Thailand": {
+            "http://mirror.kku.ac.th/archlinux/$repo/os/$arch": true,
+            "http://mirror2.totbb.net/archlinux/$repo/os/$arch": true,
+            "https://mirror.cyberbits.asia/archlinux/$repo/os/$arch": true,
+            "https://mirror.kku.ac.th/archlinux/$repo/os/$arch": true
+        }
+    },
+    "mount_point": null,
+    "nic": {
+        "dhcp": true,
+        "dns": null,
+        "gateway": null,
+        "iface": null,
+        "ip": null,
+        "type": "nm"
+    },
+    "packages": [
+        "vim",
+        "neovim",
+        "virt-manager",
+        "qemu-desktop",
+        "libvirt",
+        "scrot",
+        "edk2-ovmf",
+        "dnsmasq",
+        "rofi",
+        "zsh",
+        "git",
+        "firefox",
+        "docker",
+        "gitlab-runner",
+        "polybar"
+    ],
+    "plugin": null,
+    "profile": {
+        "path": "/usr/lib/python3.10/site-packages/archinstall/profiles/desktop.py"
+    },
+    "script": "guided",
+    "silent": false,
+    "swap": true,
+    "sys-encoding": "UTF-8",
+    "sys-language": "en_PH.UTF-8",
+    "timezone": "Asia/Manila",
+    "version": "2.5.0"
+}
