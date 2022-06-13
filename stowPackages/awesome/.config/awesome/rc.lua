@@ -49,7 +49,7 @@ beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "kitty"
-editor = os.getenv("EDITOR") or "nano"
+editor = os.getenv("EDITOR") or "nvim"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -325,7 +325,10 @@ globalkeys = gears.table.join(
               end,
               {description = "lua execute prompt", group = "awesome"}),
     -- Menubar
-    awful.key({ modkey }, "d", function() menubar.show() end,
+    awful.key({ modkey }, "d", function() 
+				-- menubar.show() 
+				awful.spawn.with_shell("rofi -combi-modi window#drun#run#ssh -show combi")
+			end,
               {description = "show the menubar", group = "launcher"})
 )
 
@@ -365,12 +368,28 @@ clientkeys = gears.table.join(
             c:raise()
         end ,
         {description = "(un)maximize vertically", group = "client"}),
-    awful.key({ modkey, "Shift"   }, "m",
+    awful.key({ modkey, "Control", "Shift"   }, "m",
         function (c)
             c.maximized_horizontal = not c.maximized_horizontal
             c:raise()
         end ,
-        {description = "(un)maximize horizontally", group = "client"})
+        {description = "(un)maximize horizontally", group = "client"}),
+
+	-- custom key bindings
+	awful.key({ modkey }, "e",
+		function() awful.spawn.with_shell("thunar")	end,
+		{description = "Launch Default File Explorer", group = "client"}),
+
+	-- screenshot with scrot
+	awful.key({modkey, "Shift"}, "a",
+		function() awful.spawn.with_shell("scrot -m ~/Pictures/Screenshots/Screenshot_%b%d::%H%M%S.png") end,
+		{description = "Take a Screenshot of the entire screen", group = "screenshot with scrot"}),
+	awful.key({modkey, "Shift"}, "s",
+		function() awful.spawn.with_shell("scrot -s ~/Pictures/Snapshots/Snapshot_%b%d::%H%M%S.png") end,
+		{description = "Take a Screenshot of selected area", group = "screenshot with scrot"}),
+	awful.key({modkey, "Shift"}, "m",
+		function() awful.spawn.with_shell("scrot --focused ~/Pictures/Snapshots/Focused_Snapshot_%b%d::%H%M%S.png") end,
+		{description = "Take a Screenshot of the selected window", group = "screenshot with scrot"})
 )
 
 -- Bind all key numbers to tags.
@@ -489,9 +508,9 @@ awful.rules.rules = {
       }, properties = { floating = true }},
 
     -- Add titlebars to normal clients and dialogs
-    { rule_any = {type = { "normal", "dialog" }
+    --[[{ rule_any = {type = { "normal", "dialog" }
       }, properties = { titlebars_enabled = true }
-    },
+    },]]
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
     -- { rule = { class = "Firefox" },
@@ -562,3 +581,26 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+
+-- temporary styling
+
+beautiful.useless_gap = 15
+
+-- auto-startup programs
+
+-- Kensington Enable Middle Mouse Scroll
+awful.spawn.with_shell("XInput_Custom_Defaults; XInput_Custom_Defaults;")
+
+-- TaskWarrior Sync
+awful.spawn.with_shell("task sync")
+
+-- Compositor
+awful.spawn.with_shell("picom")
+
+-- background
+awful.spawn.with_shell("sleep 1; nitrogen --restore;")
+
+-- startup sound
+awful.spawn.with_shell("mpv --no-video --quiet $HOME/.config/startup.wav")
+
+

@@ -13,6 +13,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add Vim-Plugged auto-install script
 - Add Zsh auto-install script
 
+## [2.1.4] - 2022-06-13
+
+### Updated
+
+- awesome
+	- restore current awesome config
+
+- archinstall config
+	- add additional packages while restoring awesome config in tandem
+
 ## [2.1.3] - 2022-06-13
 
 ### Updated
