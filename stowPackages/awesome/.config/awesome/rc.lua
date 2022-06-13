@@ -591,6 +591,9 @@ beautiful.useless_gap = 15
 -- Kensington Enable Middle Mouse Scroll
 awful.spawn.with_shell("XInput_Custom_Defaults; XInput_Custom_Defaults;")
 
+-- numlockx
+awful.spawn.with_shell("numlockx")
+
 -- TaskWarrior Sync
 awful.spawn.with_shell("task sync")
 
