@@ -98,21 +98,25 @@
         "type": "nm"
     },
     "packages": [
+        "zsh",
+        "git",
+        "os-prober",
+        "cifs-utils",
+        "sddm",
+        "man",
         "vim",
         "neovim",
         "virt-manager",
         "qemu-desktop",
         "libvirt",
-        "scrot",
         "edk2-ovmf",
         "dnsmasq",
+        "scrot",
         "rofi",
-        "zsh",
-        "git",
+        "polybar",
         "firefox",
         "docker",
-        "gitlab-runner",
-        "polybar"
+        "gitlab-runner"
     ],
     "plugin": null,
     "profile": {

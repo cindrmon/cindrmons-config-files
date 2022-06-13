@@ -12,6 +12,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add Recommended VS Code/ium Extensions
 - Add Vim-Plugged auto-install script
 
+## [2.0.26] - 2022-06-13
+
+### Updated
+
+- archinstall config
+    - refactor and add addiitonal packages
+    - separate it on a different folder on root
+
 ## [2.0.25] - 2022-06-11
 
 ### Updated
