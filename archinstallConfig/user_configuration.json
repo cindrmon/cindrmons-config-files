@@ -106,7 +106,7 @@
         "sddm",
         "man",
         "adobe-source-han-sans-jp-fonts",
-        "vim",
+        "gvim",
         "neovim",
         "virt-manager",
         "qemu-desktop",
