@@ -2,30 +2,33 @@
     "/dev/sda": {
         "partitions": [
             {
+                "ESP": true,
+                "PARTUUID": "EE05-1B9E",
                 "boot": true,
                 "encrypted": false,
                 "filesystem": {
-                    "format": "fat32"
+                    "format": "vfat"
                 },
                 "mountpoint": "/boot",
-                "size": "512MiB",
-                "start": "1MiB",
+                "size": 1046528,
+                "start": 2048,
                 "type": "primary",
                 "wipe": true
             },
             {
+                "ESP": false,
+                "PARTUUID": "e358582d-cc7a-4fa8-8d0b-d138aa76de57",
+                "boot": false,
                 "encrypted": false,
                 "filesystem": {
-                    "format": "ext4",
-                    "mount_options": []
+                    "format": "ext4"
                 },
                 "mountpoint": "/",
-                "size": "200GB",
-                "start": "513MiB",
+                "size": 419430400,
+                "start": 1050624,
                 "type": "primary",
                 "wipe": true
             }
-        ],
-        "wipe": true
+        ]
     }
 }

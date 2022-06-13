@@ -9,8 +9,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### TODO:
 
-- Add Recommended VS Code/ium Extensions
+- Add Recommended VS Code/ium Extensions (in separate directory)
 - Add Vim-Plugged auto-install script
+- Add Zsh auto-install script
+
+## [2.1.0] - 2022-06-13
+
+- Minor changes to file structure
+- return to stow management system
+- add zsh and neovim auto-install script skeleton
 
 ## [2.0.26] - 2022-06-13
 
