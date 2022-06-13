@@ -107,14 +107,14 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 # Ruby
 # eval "$(rbenv init -)"
-# export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 
 # Go
 export GOPATH=$HOME/.local/share/go
 
 # Rust
 unset rc
-. "$XDG_DATA_HOME/cargo/env"
+. "$HOME/.cargo/env"
 
 # Flutter
 # export CHROME_EXECUTABLE="/usr/bin/brave-browser"
@@ -140,9 +140,9 @@ export PATH="$PATH:$HOME/bin:$HOME/.local/bin"
 export PATH="$PATH:$(yarn global bin)"		# must set global bin config first
 
 # Ruby
-export PATH="$PATH:$HOME/.local/share/rbenv/bin"
-export PATH="$PATH:$HOME/.local/share/rbenv/plugins/ruby-build/bin"
-# export PATH="$PATH:$GEM_HOME/bin"
+# export PATH="$PATH:$HOME/.local/share/rbenv/bin"
+# export PATH="$PATH:$HOME/.local/share/rbenv/plugins/ruby-build/bin"
+export PATH="$PATH:$GEM_HOME/bin"
 
 # Go
 export PATH="$PATH:$GOPATH/bin"
