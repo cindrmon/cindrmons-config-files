@@ -9,6 +9,7 @@
 # REDIRECTS
 alias \
     ohmyzsh="cd ~/.oh-my-zsh" \
+	owo="cd $OWO" \
 \
 
 # SUDO

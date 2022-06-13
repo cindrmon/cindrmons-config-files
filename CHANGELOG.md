@@ -13,6 +13,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add Vim-Plugged auto-install script
 - Add Zsh auto-install script
 
+## [2.1.3] - 2022-06-13
+
+### Updated
+
+- zsh
+	- add the `owo` alias to send to the `$OWO` directory
+
 ## [2.1.2] - 2022-06-13
 
 ### Added
