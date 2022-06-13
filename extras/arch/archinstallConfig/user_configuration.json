@@ -123,6 +123,8 @@
         "nitrogen",
         "firefox",
         "thunar",
+	"thunar-archive-plugin",
+	"thunar-media-tags-plugin",
         "kitty",
         "docker",
         "docker-compose",
