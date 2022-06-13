@@ -13,6 +13,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add Vim-Plugged auto-install script
 - Add Zsh auto-install script
 
+## [2.1.5] - 2022-06-13
+
+### Added
+
+- add and track yay configuration
+
 ## [2.1.4] - 2022-06-13
 
 ### Updated
