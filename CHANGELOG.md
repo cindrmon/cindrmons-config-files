@@ -13,6 +13,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add Vim-Plugged auto-install script
 - Add Zsh auto-install script
 
+## [2.1.11] - 2022-06-13
+
+### Updated
+
+- yarn
+	- update yarn global bin location
+
 ## [2.1.10] - 2022-06-13
 
 ### Updated
