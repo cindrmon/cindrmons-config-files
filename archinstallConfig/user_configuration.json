@@ -122,6 +122,8 @@
         "lxappearance",
         "nitrogen",
         "firefox",
+        "thunar",
+        "kitty",
         "docker",
         "docker-compose",
         "gitlab-runner"
