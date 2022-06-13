@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add Recommended VS Code/ium Extensions (in separate directory)
 - Add Vim-Plugged auto-install script
 - Add Zsh auto-install script
+- Make AwesomeWM theme.lua
 
 ## [2.1.11] - 2022-06-13
 
