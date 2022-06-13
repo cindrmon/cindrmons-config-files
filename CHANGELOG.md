@@ -13,6 +13,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add Vim-Plugged auto-install script
 - Add Zsh auto-install script
 
+## [2.1.1] - 2022-06-13
+
+- zsh
+    - add the `$OWO` variable as the default location for cindrmons-config-files
+
 ## [2.1.0] - 2022-06-13
 
 - Minor changes to file structure
