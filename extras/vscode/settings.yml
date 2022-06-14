@@ -1,0 +1,9 @@
+# NOTE: install `zokugun.sync-settings` and copy-paste this yml file content.
+
+---
+hostname: ""
+profile: main
+repository:
+  type: file
+  path: ~/.owo/extras/vscode
+
