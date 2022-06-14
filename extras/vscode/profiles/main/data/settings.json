@@ -1,12 +1,11 @@
 {
   "workbench.sideBar.location": "right",
-  "editor.fontFamily": "Comic Code Ligatures Regular, Operator Mono, JetBrains Mono, monospace",
+  "editor.fontFamily": "Comic Code Ligatures, Operator Mono, JetBrains Mono, monospace",
   "editor.fontSize": 18,
   "editor.fontLigatures": true,
   "editor.cursorSmoothCaretAnimation": true,
   "editor.cursorBlinking": "smooth",
-  "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 8000,
+  "files.autoSave": "onFocusChange",
   "files.eol": "\n",
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -30,7 +29,11 @@
     "editor.defaultFormatter": "svelte.svelte-vscode"
   },
   "[vue]": {
-    "editor.defaultFormatter": "johnsoncodehk.volar"
+    "editor.defaultFormatter": "Vue.volar"
   },
-  "svelte.enable-ts-plugin": true
+  "svelte.enable-ts-plugin": true,
+  "glassit.alpha": 240,
+  "window.menuBarVisibility": "toggle",
+  "workbench.colorTheme": "Iceberg",
+  "workbench.iconTheme": "material-icon-theme"
 }

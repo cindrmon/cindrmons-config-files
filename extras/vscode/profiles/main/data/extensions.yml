@@ -1,0 +1,62 @@
+disabled: []
+enabled:
+  - id: castwide.solargraph
+    uuid: 349e83e2-207c-4309-a8d2-dfa43f7ee0c9
+  - id: christian-kohler.path-intellisense
+    uuid: a41c1549-4053-44d4-bf30-60fc809b4a86
+  - id: cocopon.iceberg-theme
+    uuid: 32d281a3-1221-4c5c-8a95-4d30f0e667ce
+  - id: dbaeumer.vscode-eslint
+    uuid: 583b2b34-2c1e-4634-8c0b-0b82e283ea3a
+  - id: esbenp.prettier-vscode
+    uuid: 96fa4707-6983-4489-b7c5-d5ffdfdcce90
+  - id: formulahendry.auto-close-tag
+    uuid: d3836729-9cc1-42c1-b2af-d50071f57d29
+  - id: formulahendry.auto-rename-tag
+    uuid: 6e440e71-8ed9-4f25-bb78-4b13096b8a03
+  - id: golang.go
+    uuid: d6f6cfea-4b6f-41f4-b571-6ad2ab7918da
+  - id: mikestead.dotenv
+    uuid: 532533c9-a894-4a58-9eee-bbfbe7c06f71
+  - id: MisterJ.vue-volar-extention-pack
+    uuid: 3ceb4a20-6b82-415f-bd19-2360d4789a87
+  - id: ms-python.python
+    uuid: f1f59ae4-9318-4f3c-a9b5-81b2eaa5f8a5
+  - id: ms-python.vscode-pylance
+    uuid: 364d2426-116a-433a-a5d8-a5098dc3afbd
+  - id: ms-toolsai.jupyter
+    uuid: 6c2f1801-1e7f-45b2-9b5c-7782f1e076e8
+  - id: ms-toolsai.jupyter-keymap
+    uuid: 9f6dc8db-620c-4844-b8c5-e74914f1be27
+  - id: ms-toolsai.jupyter-renderers
+    uuid: b15c72f8-d5fe-421a-a4f7-27ed9f6addbf
+  - id: ms-vscode.sublime-keybindings
+    uuid: 529697b9-b343-4b1c-ba2f-f5ef692132d4
+  - id: PKief.material-icon-theme
+    uuid: 5db78037-f674-459f-a236-db622c427c5b
+  - id: s-nlf-fh.glassit
+    uuid: 7f4f553c-204c-42fe-9b4d-7a3f11f7335b
+  - id: sdras.vue-vscode-snippets
+    uuid: c8d95916-cf54-455f-b324-cbd887b7d3a8
+  - id: sibiraj-s.vscode-scss-formatter
+    uuid: 01708053-6fab-403f-9787-9d5f3d8f7d6a
+  - id: steoates.autoimport
+    uuid: 70378119-1d85-4935-9733-0298c7a369a2
+  - id: svelte.svelte-vscode
+    uuid: c5463f77-75d9-4a25-8cc4-d8541a461285
+  - id: syler.sass-indented
+    uuid: 466468c3-1861-4ad1-bf3e-f9ad46545ebb
+  - id: Tobermory.es6-string-html
+    uuid: db50f65a-6c7c-4134-8e8d-e6b8a9c738da
+  - id: vscodevim.vim
+    uuid: d96e79c6-8b25-4be3-8545-0e0ecefcae03
+  - id: Vue.volar
+    uuid: a5223b43-8621-4351-a14e-3d560f85f277
+  - id: Vue.vscode-typescript-vue-plugin
+    uuid: 78d16c76-388b-44e4-8470-6790d6c3d2d1
+  - id: Wscats.vue
+    uuid: 4eceadb6-2b61-4000-b920-61e047aaf426
+  - id: xabikos.JavaScriptSnippets
+    uuid: a2cec723-5349-460d-9de9-0fd1f8d3456f
+  - id: ZixuanChen.vitest-explorer
+    uuid: bc1d9975-fcc6-4594-a6ec-252a3fba1eae

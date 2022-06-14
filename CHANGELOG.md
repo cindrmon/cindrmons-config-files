@@ -14,6 +14,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add Zsh auto-install script
 - Make AwesomeWM theme.lua
 
+## [2.1.12] - 2022-06-14
+
+### Updated
+
+- update `extras` folder structure
+
+- vscode
+	- use an extension to synchronise `settings.json` into this git repo
+
+- arch/*
+	- change folder names to use underscore instead of camel case
+
 ## [2.1.11] - 2022-06-13
 
 ### Updated
