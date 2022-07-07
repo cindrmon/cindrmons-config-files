@@ -90,6 +90,7 @@ plugins = {
 	{
 		"akinsho/toggleterm.nvim",
 		tag = "v1.*",
+		commit = "aaeed9e02167c5e8f00f25156895a6fd95403af8",
 		config = conf "toggleterm",
 	},
 
@@ -104,6 +105,9 @@ plugins = {
 		"kyazdani42/nvim-tree.lua",
 		config = conf "nvim-tree",
 	},
+
+	-- Sublimetext-like line movement
+	"booperlv/nvim-gomove",
 
 	-- CMP (Completion Plugins) and Snippets
 	{

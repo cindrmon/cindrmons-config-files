@@ -61,13 +61,6 @@ kmap("n", "<leader>e", ":Lex 30<cr>", opts)
 	kmap("v", ">", ">gv", opts)
 	-- }}}
 	
-	-- Move Selected Text Up and Down {{{
-	kmap("x", "<S-j>", ":move '>+1<CR>gv-gv", opts)
-	kmap("x", "<S-k>", ":move '<-2<CR>gv-gv", opts)
-	kmap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
-	kmap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
-	-- }}}
-	
 	-- Now I wouldn't need to worry what's on the paste register anymore! {{{
 	kmap("v", "p", '"_dP', opts)
 	-- }}}
@@ -88,6 +81,27 @@ kmap("i", "<C-_>", "<ESC><Plug>(comment_toggle_current_linewise)<CR>ki", opts)
 
 -- nvim-tree
 kmap("n", "<A-v>", ":NvimTreeToggle<CR>", opts)
+
+-- GoMove
+kmap("n", "<S-h>", "<Plug>GoNSMLeft", opts)
+kmap("n", "<S-j>", "<Plug>GoNSMDown", opts)
+kmap("n", "<S-k>", "<Plug>GoNSMUp", opts)
+kmap("n", "<S-l>", "<Plug>GoNSMRight", opts)
+
+kmap("n", "<C-h>", "<Plug>GoNSDLeft", opts)
+kmap("n", "<C-j>", "<Plug>GoNSDDown", opts)
+kmap("n", "<C-k>", "<Plug>GoNSDUp", opts)
+kmap("n", "<C-l>", "<Plug>GoNSDRight", opts)
+
+kmap("v", "<S-h>", "<Plug>GoVSMLeft", opts)
+kmap("v", "<S-j>", "<Plug>GoVSMDown", opts)
+kmap("v", "<S-k>", "<Plug>GoVSMUp", opts)
+kmap("v", "<S-l>", "<Plug>GoVSMRight", opts)
+
+kmap("v", "<C-h>", "<Plug>GoVSDLeft", opts)
+kmap("v", "<C-j>", "<Plug>GoVSDDown", opts)
+kmap("v", "<C-k>", "<Plug>GoVSDUp", opts)
+kmap("v", "<C-l>", "<Plug>GoVSDRight", opts)
 
 -- }}}
 

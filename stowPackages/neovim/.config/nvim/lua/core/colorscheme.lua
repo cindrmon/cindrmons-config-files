@@ -8,6 +8,16 @@
 
 -- For more information, run `:help options`
 
+-- VIM API
+local api = vim.api
+local autocmd = api.nvim_create_autocmd
+local augroup = api.nvim_create_augroup
+
+local function augroupc(group_name)
+	augroup(group_name, {clear = true})
+end
+
+
 -- ENTER COLOR SCHEME HERE (default: "default")
 local colorscheme = "iceberg"
 
@@ -19,12 +29,23 @@ if not status_ok then
 end
 
 -- DISABLE NEOVIM BACKGROUND
-vim.cmd [[
-	augroup disable_background
-		autocmd VimEnter * highlight	Normal guibg=NONE ctermbg=NONE		" disable neovim background
-		autocmd VimEnter * highlight!	link CursorColumn CursorLine		" keep colorscheme background color for cursor column and line instead
-	augroup end
-]]
+augroupc("disable_background")
+
+-- Disable Neovim Background
+autocmd('VimEnter',
+{
+	pattern = "*",
+	group = "disable_background",
+	command = "highlight Normal guibg=NONE ctermbg=NONE"
+})
+
+-- keep colorscheme background color for cursor column and line instead 
+autocmd('VimEnter',
+{
+	pattern = "*",
+	group = "disable_background",
+	command = "highlight! link CursorColumn CursorLine"
+})
 
 -- vim:fileencoding=utf-8:foldmethod=marker
 
