@@ -45,10 +45,10 @@ kmap("n", "<S-h>", ":bprevious<cr>", opts)
 -- }}}
 
 -- TAB MANAGEMENT {{{
-kmap("n", "<leader>n", ":tabnew<cr>", opts)
-kmap("n", "<leader>h", ":tabprevious<cr>", opts)
-kmap("n", "<leader>l", ":tabnext<cr>", opts)
-kmap("n", "<leader>c", ":tabclose<cr>", opts)
+--kmap("n", "<leader>n", ":tabnew<cr>", opts)
+--kmap("n", "<leader>h", ":tabprevious<cr>", opts)
+--kmap("n", "<leader>l", ":tabnext<cr>", opts)
+--kmap("n", "<leader>c", ":tabclose<cr>", opts)
 -- }}}
 
 -- NEOVIM EXPLORER {{{
@@ -68,6 +68,14 @@ kmap("n", "<A-v>", ":Lex 30<cr>", opts)
 
 -- PLUGIN KEYMAPS {{{
 
+-- BarBar
+kmap("n", "<A-t>", ":tabnew<cr>", opts)
+kmap("n", "<A-h>", ":BufferPrevious<cr>", opts)
+kmap("n", "<A-l>", ":BufferNext<cr>", opts)
+kmap("n", "<A-H>", ":BufferMovePrevious<cr>", opts)
+kmap("n", "<A-L>", ":BufferMoveNext<cr>", opts)
+kmap("n", "<A-c>", ":BufferClose<cr>", opts)
+
 -- Telescope
 kmap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
 kmap("n", "<leader>ft", ":Telescope live_grep<CR>", opts)
@@ -83,25 +91,25 @@ kmap("i", "<C-_>", "<ESC><Plug>(comment_toggle_current_linewise)<CR>ki", opts)
 kmap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- GoMove
-kmap("n", "<S-h>", "<Plug>GoNSMLeft", opts)
+kmap("n", "<leader><S-h>", "<Plug>GoNSMLeft", opts)
 kmap("n", "<S-j>", "<Plug>GoNSMDown", opts)
 kmap("n", "<S-k>", "<Plug>GoNSMUp", opts)
-kmap("n", "<S-l>", "<Plug>GoNSMRight", opts)
+kmap("n", "<leader><S-l>", "<Plug>GoNSMRight", opts)
 
-kmap("n", "<C-h>", "<Plug>GoNSDLeft", opts)
-kmap("n", "<C-j>", "<Plug>GoNSDDown", opts)
-kmap("n", "<C-k>", "<Plug>GoNSDUp", opts)
-kmap("n", "<C-l>", "<Plug>GoNSDRight", opts)
+kmap("n", "<leader><C-h>", "<Plug>GoNSDLeft", opts)
+kmap("n", "<leader><C-j>", "<Plug>GoNSDDown", opts)
+kmap("n", "<leader><C-k>", "<Plug>GoNSDUp", opts)
+kmap("n", "<leader><C-l>", "<Plug>GoNSDRight", opts)
 
-kmap("v", "<S-h>", "<Plug>GoVSMLeft", opts)
+kmap("v", "<leader><S-h>", "<Plug>GoVSMLeft", opts)
 kmap("v", "<S-j>", "<Plug>GoVSMDown", opts)
 kmap("v", "<S-k>", "<Plug>GoVSMUp", opts)
-kmap("v", "<S-l>", "<Plug>GoVSMRight", opts)
+kmap("v", "<leader><S-l>", "<Plug>GoVSMRight", opts)
 
-kmap("v", "<C-h>", "<Plug>GoVSDLeft", opts)
-kmap("v", "<C-j>", "<Plug>GoVSDDown", opts)
-kmap("v", "<C-k>", "<Plug>GoVSDUp", opts)
-kmap("v", "<C-l>", "<Plug>GoVSDRight", opts)
+kmap("v", "<leader><C-h>", "<Plug>GoVSDLeft", opts)
+kmap("v", "<leader><C-j>", "<Plug>GoVSDDown", opts)
+kmap("v", "<leader><C-k>", "<Plug>GoVSDUp", opts)
+kmap("v", "<leader><C-l>", "<Plug>GoVSDRight", opts)
 
 -- }}}
 
