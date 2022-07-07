@@ -52,7 +52,7 @@ kmap("n", "<leader>c", ":tabclose<cr>", opts)
 -- }}}
 
 -- NEOVIM EXPLORER {{{
-kmap("n", "<leader>e", ":Lex 30<cr>", opts)
+kmap("n", "<A-v>", ":Lex 30<cr>", opts)
 -- }}}
 
 -- CUSTOM VISUAL COMMANDS {{{
@@ -80,7 +80,7 @@ kmap("v", "<C-_>", "<Plug>(comment_toggle_current_visual)<CR>", opts)
 kmap("i", "<C-_>", "<ESC><Plug>(comment_toggle_current_linewise)<CR>ki", opts)
 
 -- nvim-tree
-kmap("n", "<A-v>", ":NvimTreeToggle<CR>", opts)
+kmap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- GoMove
 kmap("n", "<S-h>", "<Plug>GoNSMLeft", opts)

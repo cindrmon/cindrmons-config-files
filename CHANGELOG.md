@@ -13,6 +13,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add Zsh auto-install script
 - Make AwesomeWM theme.lua
 
+## [2.2.2] - 2022-07-08
+
+### Updated
+
+- neovim
+	- change keybindings for nvim-tree
+
 ## [2.2.1] - 2022-07-08
 
 ### Updated
