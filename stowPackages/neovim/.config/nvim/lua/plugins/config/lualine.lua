@@ -1,8 +1,11 @@
 
+-- setup lualine
+local status_ok, lualine = pcall(require, "lualine")
+if not status_ok then
+	return
+end
 
--- require('lualine').setup() --load Lualine
-
-require('lualine').setup {
+lualine.setup {
   options = {
     icons_enabled = true,
     theme = 'auto',
