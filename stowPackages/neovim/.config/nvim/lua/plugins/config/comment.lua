@@ -1,6 +1,10 @@
 
+local status_ok, comment = pcall(require, "Comment")
+if not status_ok then
+	return
+end
 
-require('Comment').setup(
+comment.setup(
 {
   -- Add a space b/w comment and the line @type boolean|fun():boolean
   padding = false,

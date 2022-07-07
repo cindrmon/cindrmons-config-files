@@ -1,6 +1,5 @@
 
 
-
 -- Set barbar's options
 vim.g.bufferline = {
   animation     = true,         -- animations
