@@ -54,8 +54,8 @@ alias \
 
 ## ARCHLINUX
 alias \
-    p="sudo pacman -S" \
-    y="yay -S" \
+    p="sudo pacman -Sy" \
+    y="yay -Sy" \
 \
 
 # NMCLI (Primarily for Archlinux install)
