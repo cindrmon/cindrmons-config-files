@@ -13,6 +13,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add Zsh auto-install script
 - Make AwesomeWM theme.lua
 
+## [2.2.5] - 2022-07-08
+
+### Updated
+
+- awesome
+	- update wibar to polybar
+
 ## [2.2.4] - 2022-07-08
 
 ### Updated
