@@ -128,6 +128,8 @@
         "firefox",
 		"discord",
 		"pavucontrol",
+		"kmix",
+		"network-manager-applet",
 		"task",
         "thunar",
 		"thunar-archive-plugin",
