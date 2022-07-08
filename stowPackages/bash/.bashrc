@@ -30,5 +30,7 @@ if [ -d ~/.bashrc.d ]; then
 	done
 fi
 
+shopt -s extglob
+
 unset rc
 . "$HOME/.cargo/env"
