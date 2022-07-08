@@ -13,6 +13,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add Zsh auto-install script
 - Make AwesomeWM theme.lua
 
+## [2.2.4] - 2022-07-08
+
+### Updated
+
+- neovim
+	- add startup dashboard using [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim)
+	- add projects detection using [ahmedkhalf/project.nvim](https://github.com/ahmedkhalf/project.nvim)
+
 ## [2.2.3] - 2022-07-08
 
 ### Updated

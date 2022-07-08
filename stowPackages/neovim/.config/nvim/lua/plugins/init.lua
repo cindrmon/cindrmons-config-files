@@ -43,6 +43,7 @@ plugins = {
 	{
 		"nvim-telescope/telescope.nvim",
 		"nvim-telescope/telescope-media-files.nvim",
+		"nvim-telescope/telescope-project.nvim",
 		config = conf "telescope"
 	},
 
@@ -84,7 +85,10 @@ plugins = {
 	},
 
 	-- Projects
-	"ahmedkhalf/project.nvim",
+	{
+		"ahmedkhalf/project.nvim",
+		config = conf "project",
+	},
 
 	-- Terminal
 	{
@@ -104,6 +108,12 @@ plugins = {
 	{
 		"kyazdani42/nvim-tree.lua",
 		config = conf "nvim-tree",
+	},
+
+	-- Neovim Greeter
+	{
+		"goolord/alpha-nvim",
+		config = conf "alpha",
 	},
 
 	-- Sublimetext-like line movement
