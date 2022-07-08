@@ -116,6 +116,9 @@ export GOPATH=$HOME/.local/share/go
 unset rc
 . "$HOME/.cargo/env"
 
+# R
+export R_LIBS_USER=$XDG_DATA_HOME/r/libs
+
 # Flutter
 # export CHROME_EXECUTABLE="/usr/bin/brave-browser"
 
