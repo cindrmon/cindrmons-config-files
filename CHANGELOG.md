@@ -13,6 +13,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add Zsh auto-install script
 - Make AwesomeWM theme.lua
 
+## [2.2.6] - 2022-07-09
+
+### Updated
+
+- neovim
+	- add manual workspace management with [natecraddock/workspaces.nvim](https://github.com/natecraddock/workspaces.nvim)
+	- fix and add formatting shortcut for null-ls
+
 ## [2.2.5] - 2022-07-08
 
 ### Updated
