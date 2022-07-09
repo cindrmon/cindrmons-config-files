@@ -68,6 +68,9 @@ kmap("n", "<A-v>", ":Lex 30<cr>", opts)
 
 -- PLUGIN KEYMAPS {{{
 
+-- LSP
+kmap("n", "<leader>f", ":Format<cr>", opts)
+
 -- BarBar
 kmap("n", "<A-t>", ":tabnew<cr>", opts)
 kmap("n", "<A-h>", ":BufferPrevious<cr>", opts)
@@ -77,10 +80,11 @@ kmap("n", "<A-L>", ":BufferMoveNext<cr>", opts)
 kmap("n", "<A-c>", ":BufferClose<cr>", opts)
 
 -- Telescope
-kmap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
-kmap("n", "<leader>ft", ":Telescope live_grep<CR>", opts)
-kmap("n", "<leader>fp", ":Telescope projects<CR>", opts)
-kmap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
+kmap("n", "<leader>tf", ":Telescope find_files<CR>", opts)
+kmap("n", "<leader>tt", ":Telescope live_grep<CR>", opts)
+kmap("n", "<leader>tp", ":Telescope projects<CR>", opts)
+kmap("n", "<leader>tw", ":Telescope workspaces<CR>", opts)
+kmap("n", "<leader>tb", ":Telescope buffers<CR>", opts)
 
 -- Comment
 kmap("n", "<C-_>", "<Plug>(comment_toggle_current_linewise)<CR>", opts)

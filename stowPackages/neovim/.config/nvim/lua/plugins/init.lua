@@ -84,10 +84,14 @@ plugins = {
 		config = conf "lualine"
 	},
 
-	-- Projects
+	-- Projects and Workspaces
 	{
 		"ahmedkhalf/project.nvim",
 		config = conf "project",
+	},
+	{
+		"natecraddock/workspaces.nvim",
+		config = conf "workspace",
 	},
 
 	-- Terminal

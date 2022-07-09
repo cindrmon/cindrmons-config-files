@@ -15,11 +15,13 @@ null_ls.setup {
   sources = {
     formatting.prettier.with {
       extra_filetypes = { "toml" },
-      extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
+      extra_args = { "--no-semi"},
     },
     formatting.black.with { extra_args = { "--fast" } },
     formatting.stylua,
     formatting.google_java_format,
+	formatting.gofmt,
+	formatting.autopep8,
     diagnostics.flake8,
   },
 }
