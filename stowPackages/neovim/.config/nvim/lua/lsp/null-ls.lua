@@ -21,6 +21,7 @@ null_ls.setup {
     formatting.stylua,
     formatting.google_java_format,
 	formatting.gofmt,
+	formatting.rubocop,
 	formatting.autopep8,
     diagnostics.flake8,
   },
