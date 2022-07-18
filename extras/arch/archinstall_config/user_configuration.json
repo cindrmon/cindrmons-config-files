@@ -105,6 +105,8 @@
         "cifs-utils",
         "sddm",
         "man",
+		"tldr",
+		"bat",
         "adobe-source-han-sans-jp-fonts",
         "gvim",
         "neovim",
@@ -139,7 +141,8 @@
         "kitty",
         "docker",
         "docker-compose",
-        "gitlab-runner"
+        "gitlab-runner",
+		"autojump"
     ],
     "plugin": null,
     "profile": {
