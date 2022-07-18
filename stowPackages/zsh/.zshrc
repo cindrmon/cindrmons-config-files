@@ -50,6 +50,7 @@ ZSH_THEME_RANDOM_CANDIDATES=( "candy-24h" "agnoster" )    #
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+	autojump
 	git
     yarn
     node
@@ -106,6 +107,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 # Bun
 export BUN_INSTALL="$HOME/.local/share/bun"
+[ -s "$BUN_INSTALL/_bun" ] && source "$BUN_INSTALL/_bun"
 
 # Ruby
 # eval "$(rbenv init -)"
@@ -187,6 +189,4 @@ source $HOME/.config/aliases
 #########################################################################
 
 
-# bun completions
-[ -s "/home/cinder/.bun/_bun" ] && source "/home/cinder/.bun/_bun"
 
