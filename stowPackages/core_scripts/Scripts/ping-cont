@@ -3,11 +3,9 @@
 iteration_printout() {
     printf "=============================\n\n"
     date
-    printf "    Ping Attempt # $ctr\n\n"
+    printf "    Ping Attempt # $2\n\n"
     ping $1 -c 10
     printf "\n=============================\n\n"
-    idx=$(( idx+1 ))
-    ctr=$(( ctr+1 ))
 }
 
 if [ -z $1 ]; then
@@ -23,6 +21,9 @@ else
     else
         isLog=0
     fi
+
+    iterations=$1
+    destination=$2
     
     echo "Enter Start of Counter: "
     read ctr
@@ -30,12 +31,17 @@ else
     idx=1
     current_timestamp=$(date +%Y-%m-%dT%H%M%S_Z%z | sed 's/+//')
 
-    while [ $idx -le $1 ]; do
+    if [[ $isLog == 1 ]]; then
+	    touch $HOME/Documents/Logs/ping-cont_${current_timestamp}.txt
+    fi
+
+    while [ $idx -le $iterations ]; do
         trap exit SIGINT SIGTERM
         if [[ $isLog == 1 ]]; then
-            iteration_printout $2 | tee $HOME/Documents/__Documents/Logs/${current_timestamp}-ping.txt
+            iteration_printout $destination $idx | tee -a $HOME/Documents/Logs/ping-cont_${current_timestamp}.txt
         else 
-            iteration_printout $2
+            iteration_printout $destination $idx
         fi
+	((idx++))
     done
 fi
