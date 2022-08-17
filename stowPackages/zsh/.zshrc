@@ -103,7 +103,9 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 # Deno
 # export DENO_DIR="$HOME/.local/share/deno"
-# export PATH="$PATH:/home/cinder/.local/share/deno/bin"
+
+# Bun
+export BUN_INSTALL="$HOME/.local/share/bun"
 
 # Ruby
 # eval "$(rbenv init -)"
@@ -142,6 +144,12 @@ export PATH="$PATH:$HOME/bin:$HOME/.local/bin"
 # Yarn
 export PATH="$PATH:$(yarn global bin)"		# must set global bin config first
 
+# Deno
+# export PATH="$PATH:$DENO_DIR/bin"
+
+# Bun
+export PATH="$PATH:$BUN_INSTALL/bin"
+
 # Ruby
 # export PATH="$PATH:$HOME/.local/share/rbenv/bin"
 # export PATH="$PATH:$HOME/.local/share/rbenv/plugins/ruby-build/bin"
@@ -177,4 +185,8 @@ source $HOME/.config/aliases
 #########################################################################
 ###########################  NOTHING FOLLOWS  ###########################
 #########################################################################
+
+
+# bun completions
+[ -s "/home/cinder/.bun/_bun" ] && source "/home/cinder/.bun/_bun"
 
