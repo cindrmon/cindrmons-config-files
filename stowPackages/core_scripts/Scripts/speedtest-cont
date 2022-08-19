@@ -23,6 +23,6 @@ else
 
     while [ $idx -le $1 ]; do
         trap exit SIGINT SIGTERM
-        iteration_printout $1
+        iteration_printout $1 | tee -a ~/Documents/Logs/ping-cont_$current_timestamp.txt
     done
 fi

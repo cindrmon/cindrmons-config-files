@@ -1,0 +1,99 @@
+#!/bin/bash
+
+# GLOBAL VARIABLES
+
+CURRENT_TIMESTAMP=$(date +%Y-%m-%dT%H%M%S_Z%z | sed 's/+//')
+ENABLE_LOGGING=0
+LOG_LOCATION=$HOME/Documents/Logs/ping-cont_${CURRENT_TIMESTAMP}.txt
+
+
+prog_start_msg() {
+
+	ITER=$1
+	CTR=$2
+
+	clear
+
+	gum style --foreground 155 --border-foreground 155 \
+		--border normal --align center --padding "1 2" \
+		"THIS PROGRAM WILL NOW RUN $(( $ITER - $CTR + 1 )) TIMES!" \
+		"Starting at ${CTR}..." 
+
+	sleep 2
+
+	clear
+
+}
+
+enable_logging() {
+
+	SHOULD_LOG=$1
+
+	if [[ $SHOULD_LOG == "t" ]]; then
+		ENABLE_LOGGING=1
+		touch $LOG_LOCATION
+		LINE_1=$(gum style --foreground 11 'Current Output is now being logged!')
+		LINE_2A=$(gum style --foreground 11 "Location: ")
+		LINE_2B=$(gum style --foreground 158 "$LOG_LOCATION")
+		LINE_2=$(gum join --horizontal "$LINE_2A" "$LINE_2B")
+		gum join --vertical "$LINE_1" "$LINE_2"
+	fi
+}
+
+iteration_printout() {
+
+	DEST_ADDR=$1
+	CTR_IDX=$2
+
+	gum style \
+		--foreground 147 --border-foreground 147 --border normal \
+		--align left --width 60 --margin "1 2" --padding "1 2" \
+		"$(date)" \
+		"Ping Attempt # ${CTR_IDX}" 
+
+	ping $DEST_ADDR -c 5
+
+}
+
+
+
+if ! [[ -x "/usr/bin/gum" ]]; then
+	echo "You need to install `gum` to run this script."
+else
+	# necessary parameter validation
+	if [ -z $1 ]; then
+		echo "You need to set a number first."
+	elif [ -z $2 ]; then
+		echo "Destination address required."
+	else
+
+		# Set Parameter Variables
+		NUM_OF_ITERATIONS=$1
+		DEST_ADDRESS=$2
+		LOGGING=$3
+		
+		# User Input
+		COUNTER=$(gum input --placeholder "Enter Start of Counter: ")
+
+		# User Pre-Prompt
+		prog_start_msg $NUM_OF_ITERATIONS $COUNTER
+
+		# Optional Logging
+		enable_logging $LOGGING
+
+		# Ping Iteration
+		while [ $COUNTER -le $NUM_OF_ITERATIONS ]; do
+			trap exit SIGINT SIGTERM
+			if [[ $ENABLE_LOGGING == 1 ]]; then
+				iteration_printout $DEST_ADDRESS $COUNTER | tee -a $LOG_LOCATION
+			else 
+				iteration_printout $DEST_ADDRESS $COUNTER
+			fi
+		((COUNTER++))
+		done
+
+	fi
+fi
+
+
+
