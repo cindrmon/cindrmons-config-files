@@ -133,9 +133,15 @@ export R_LIBS_USER=$XDG_DATA_HOME/r/libs
 # Flutter
 # export CHROME_EXECUTABLE="/usr/bin/brave-browser"
 
+# MangoHud
+export MANGOHUD=1
+
 # GPG
 export GPG_TTY=$(tty)
 export GNUPGHOME=$HOME/.gnupg
+
+# External Environment Variables
+source $HOME/.config/.env
 
 ## }}} #################################################################
 ########################################################################
