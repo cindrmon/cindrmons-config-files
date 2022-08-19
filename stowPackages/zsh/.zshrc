@@ -113,6 +113,9 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export BUN_INSTALL="$HOME/.local/share/bun"
 [ -s "$BUN_INSTALL/_bun" ] && source "$BUN_INSTALL/_bun"
 
+# Angular CLI Autocompletion
+source <(ng completion script)
+
 # Ruby
 # eval "$(rbenv init -)"
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
