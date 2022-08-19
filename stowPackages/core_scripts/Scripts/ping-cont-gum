@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 # GLOBAL VARIABLES
 
 CURRENT_TIMESTAMP=$(date +%Y-%m-%dT%H%M%S_Z%z | sed 's/+//')
@@ -61,8 +62,7 @@ iteration_printout() {
 }
 
 
-
-if ! [[ -x "/usr/bin/gum" ]]; then
+if [ ! -x "/usr/bin/gum" ]; then
 	echo "You need to install `gum` to run this script."
 else
 	# necessary parameter validation

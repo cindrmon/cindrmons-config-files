@@ -1,0 +1,14 @@
+#!/bin/bash
+
+gum_check() {
+	if [ ! -x /usr/bin/gum ]; then
+		echo -e "Gum is not installed. Please install gum."
+	else
+		gum style --foreground 155 --border-foreground 155 \
+			--border normal --align center --padding "1 2" \
+			"Congratulations! Gum is installed!" 
+	fi
+
+}
+
+gum_check
