@@ -50,6 +50,7 @@ ZSH_THEME_RANDOM_CANDIDATES=( "candy-24h" "agnoster" )    #
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+	vi-mode
 	autojump
 	git
     yarn
@@ -61,6 +62,9 @@ plugins=(
 
 # Oh My Zsh
 source $ZSH/oh-my-zsh.sh
+
+# Vim mode
+bindkey -v
 
 ## }}} #################################################################
 ########################################################################
@@ -187,6 +191,8 @@ source $HOME/.config/aliases
 #########################################################################
 ###########################  NOTHING FOLLOWS  ###########################
 #########################################################################
+
+
 
 
 
