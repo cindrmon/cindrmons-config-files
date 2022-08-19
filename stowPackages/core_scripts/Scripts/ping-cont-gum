@@ -4,7 +4,8 @@
 
 CURRENT_TIMESTAMP=$(date +%Y-%m-%dT%H%M%S_Z%z | sed 's/+//')
 ENABLE_LOGGING=0
-LOG_LOCATION=$HOME/Documents/Logs/ping-cont_${CURRENT_TIMESTAMP}.txt
+LOG_LOCATION=$HOME/Documents/Logs
+LOGFILE_NAME=ping-cont_${CURRENT_TIMESTAMP}.txt
 
 
 prog_start_msg() {
@@ -31,12 +32,16 @@ enable_logging() {
 
 	if [[ $SHOULD_LOG == "t" ]]; then
 		ENABLE_LOGGING=1
-		touch $LOG_LOCATION
-		LINE_1=$(gum style --foreground 11 'Current Output is now being logged!')
-		LINE_2A=$(gum style --foreground 11 "Location: ")
-		LINE_2B=$(gum style --foreground 158 "$LOG_LOCATION")
-		LINE_2=$(gum join --horizontal "$LINE_2A" "$LINE_2B")
-		gum join --vertical "$LINE_1" "$LINE_2"
+		if [ ! -d "$LOG_LOCATION" ]; then
+			mkdir $LOG_LOCATION
+		else
+			touch $LOG_LOCATION/$LOGFILE_NAME
+			LINE_1=$(gum style --foreground 11 'Current Output is now being logged!')
+			LINE_2A=$(gum style --foreground 11 "Location: ")
+			LINE_2B=$(gum style --foreground 158 "$LOG_LOCATION/$LOGFILE_NAME")
+			LINE_2=$(gum join --horizontal "$LINE_2A" "$LINE_2B")
+			gum join --vertical "$LINE_1" "$LINE_2"
+		fi
 	fi
 }
 
@@ -85,7 +90,7 @@ else
 		while [ $COUNTER -le $NUM_OF_ITERATIONS ]; do
 			trap exit SIGINT SIGTERM
 			if [[ $ENABLE_LOGGING == 1 ]]; then
-				iteration_printout $DEST_ADDRESS $COUNTER | tee -a $LOG_LOCATION
+				iteration_printout $DEST_ADDRESS $COUNTER | tee -a "$LOG_LOCATION/$LOGFILE_NAME"
 			else 
 				iteration_printout $DEST_ADDRESS $COUNTER
 			fi
