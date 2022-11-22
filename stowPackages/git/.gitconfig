@@ -9,4 +9,4 @@
 	last = log -1 HEAD --decorate
 	glog = log --graph --decorate --pretty=format:'%C(auto)%d %h by %Cgreen%an%Creset: %s' --abbrev-commit
 [init]
-	defaultBranch = master
+	defaultBranch = main
