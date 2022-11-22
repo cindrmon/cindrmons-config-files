@@ -141,7 +141,9 @@ export GPG_TTY=$(tty)
 export GNUPGHOME=$HOME/.gnupg
 
 # External Environment Variables
+if [ -f $HOME/.config/.env ]; then
 source $HOME/.config/.env
+fi
 
 ## }}} #################################################################
 ########################################################################
