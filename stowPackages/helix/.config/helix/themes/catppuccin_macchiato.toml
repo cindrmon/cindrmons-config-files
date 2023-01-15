@@ -1,7 +1,3 @@
-# Catppuccin Macchiato
-#
-# Taken from https://github.com/catppuccin/helix
-
 # Syntax highlighting
 # -------------------
 "type" = "yellow"
@@ -64,7 +60,7 @@
 
 # User Interface
 # --------------
-"ui.background" = { fg = "text", bg = "base" }
+"ui.background" = { fg = "text" }
 
 "ui.linenr" = { fg = "surface1" }
 "ui.linenr.selected" = { fg = "lavender" }
