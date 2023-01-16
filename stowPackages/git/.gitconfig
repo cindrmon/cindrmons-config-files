@@ -10,3 +10,8 @@
 	glog = log --graph --decorate --pretty=format:'%C(auto)%d %h by %Cgreen%an%Creset: %s' --abbrev-commit
 [init]
 	defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
